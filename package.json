@@ -35,6 +35,6 @@
     "scripts": {
         "test": "grunt test"
     },
-    "main": "Gruntfile.js",
+    "main": "lib/mocha",
     "private": true
 }
