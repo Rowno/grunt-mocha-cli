@@ -13,18 +13,14 @@ module.exports = function (grunt) {
                 '!node_modules/**/*'
             ]
         },
-        mochacli: {
-            options: {
-                require: ['should']
-            },
-            all: {
-            }
+        nodeunit: {
+            all: ['test/*.js']
         }
     });
 
-    grunt.loadTasks('tasks');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
-    grunt.registerTask('test', ['jshint', 'mochacli']);
+    grunt.registerTask('test', ['jshint', 'nodeunit']);
     grunt.registerTask('default', 'test');
 };

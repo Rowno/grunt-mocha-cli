@@ -1,6 +1,6 @@
 {
     "name": "grunt-mocha-cli",
-    "description": "Run Mocha server-side tests in Grunt",
+    "description": "Run Mocha server-side tests in Grunt.",
     "version": "0.1.0",
     "author": "Roland Warmerdam (http://rolandwarmerdam.co.nz)",
     "keywords": ["gruntplugin"],
@@ -30,7 +30,9 @@
     "devDependencies": {
         "grunt": "0.4.0rc8",
         "grunt-contrib-jshint": "0.1.1rc6",
-        "should": "*"
+        "grunt-contrib-nodeunit": "0.1.2rc6",
+        "coffee-script": "1.4.x",
+        "should": "1.2.x"
     },
     "scripts": {
         "test": "grunt test"
