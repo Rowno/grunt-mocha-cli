@@ -16,7 +16,7 @@ exports['sanity check'] = function (test) {
     });
 };
 
-exports['set value option'] = function (test) {
+exports['set string option'] = function (test) {
     test.expect(2);
 
     mocha({
