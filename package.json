@@ -25,12 +25,12 @@
         "mocha": "1.8.x"
     },
     "peerDependencies": {
-        "grunt": "0.4.0rc8"
+        "grunt": "0.4.x"
     },
     "devDependencies": {
-        "grunt": "0.4.0rc8",
-        "grunt-contrib-jshint": "0.1.1rc6",
-        "grunt-contrib-nodeunit": "0.1.2rc6",
+        "grunt": "0.4.x",
+        "grunt-contrib-jshint": "0.1.x",
+        "grunt-contrib-nodeunit": "0.1.x",
         "coffee-script": "1.4.x",
         "should": "1.2.x"
     },
