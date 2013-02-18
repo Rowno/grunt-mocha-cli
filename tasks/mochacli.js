@@ -6,8 +6,12 @@ var mocha = require('../lib/mocha');
 module.exports = function (grunt) {
     grunt.registerMultiTask('mochacli', 'Run Mocha server-side tests.', function () {
         var options = this.options();
+        var globs = [];
         if (!options.files) {
-            options.files = this.file.srcRaw;
+            this.files.forEach(function (glob) {
+                globs = globs.concat(glob.orig.src);
+            });
+            options.files = globs;
         }
 
         mocha(options, this.async());
