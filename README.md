@@ -50,21 +50,19 @@ Define test files using the standard Grunt format:
 ```javascript
 grunt.initConfig({
     mochacli: {
-        all: {
-            options: {
-                require: ['should'],
-                reporter: 'nyan',
-                bail: true
-            },
-            src: 'test/*.js'
-        }
+        options: {
+            require: ['should'],
+            reporter: 'nyan',
+            bail: true
+        },
+        all: ['test/*.js']
     }
 });
 
 grunt.registerTask('test', ['mochacli']);
 ```
 
-Define test files once using the `files` option and then customise the options per target:
+Define test files and basic options once, then customise options per target:
 
 ```javascript
 grunt.initConfig({
