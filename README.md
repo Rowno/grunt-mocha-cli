@@ -1,6 +1,15 @@
-# Grunt Mocha CLI [![Build Status](https://secure.travis-ci.org/Rowno/grunt-mocha-cli.png?branch=master)](http://travis-ci.org/Rowno/grunt-mocha-cli)
+# Grunt Mocha CLI [![Build Status][travis-image]][travis]
 
-Run Mocha server-side tests in Grunt.
+Run [Mocha][] server-side tests in [Grunt][].
+
+
+Getting Started
+---------------
+If you haven't used [Grunt][] before, be sure to check out the [Getting Started][] guide, as it explains how to create a Gruntfile as well as install and use Grunt plugins. You can install this plugin with this command:
+
+```bash
+npm install grunt-mocha-cli --save-dev
+```
 
 
 Usage
@@ -30,10 +39,13 @@ The list of test files to run can be specified using either the standard Grunt f
  * `compilers` (array) - use the given module(s) to compile files.
 
 #### Extras ####
- * `quiet` (boolean) - suppress printing of the Mocha output to the terminal.
+ * `quiet` (boolean) - disable printing of Mocha's output to the terminal.
  * `files` (string|array) - glob(s) of test files to run.
 
+
 ### Examples ###
+
+Define test files using the standard Grunt format:
 
 ```javascript
 grunt.initConfig({
@@ -51,6 +63,8 @@ grunt.initConfig({
 
 grunt.registerTask('test', ['mochacli']);
 ```
+
+Define test files once using the `files` option and then customise the options per target:
 
 ```javascript
 grunt.initConfig({
@@ -76,8 +90,20 @@ grunt.registerTask('test', ['mochacli:spec']);
 ```
 
 
+Contributing
+------------
+In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using Grunt.
+
+
 License
 -------
 Grunt Mocha CLI is released under the MIT license.
 
 Copyright © 2013 Roland Warmerdam.
+
+
+[Mocha]: http://visionmedia.github.com/mocha/
+[Grunt]: http://gruntjs.com/
+[Getting Started]: http://gruntjs.com/getting-started
+[travis]: http://travis-ci.org/Rowno/grunt-mocha-cli
+[travis-image]: https://secure.travis-ci.org/Rowno/grunt-mocha-cli.png?branch=master
