@@ -16,6 +16,30 @@ exports['sanity check'] = function (test) {
     });
 };
 
+exports['mocha pass'] = function (test) {
+    test.expect(1);
+
+    mocha({
+        files: [__dirname + '/fixture/pass.js'],
+        quiet: true
+    }, function (error) {
+        test.ok(!error, 'mocha should pass');
+        test.done();
+    });
+};
+
+exports['mocha fail'] = function (test) {
+    test.expect(1);
+
+    mocha({
+        files: [__dirname + '/fixture/fail.js'],
+        quiet: true
+    }, function (error) {
+        test.ok(error, 'mocha should fail');
+        test.done();
+    });
+};
+
 exports['set string option'] = function (test) {
     test.expect(2);
 
