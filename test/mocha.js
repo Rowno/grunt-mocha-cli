@@ -111,7 +111,7 @@ exports['file glob'] = function (test) {
     }, function (error, output) {
         output = JSON.parse(output);
         test.ifError(error);
-        test.strictEqual(output.stats.suites, 2, 'should run 2 files');
+        test.strictEqual(output.stats.suites, 2, 'should run 2 tests');
         test.done();
     });
 };
