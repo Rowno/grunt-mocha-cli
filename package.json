@@ -19,7 +19,7 @@
         "url": "https://github.com/Rowno/grunt-mocha-cli/issues"
     },
     "engines": {
-        "node": "0.8.x"
+        "node": "0.10.x 0.8.x"
     },
     "dependencies": {
         "mocha": "1.8.x"
