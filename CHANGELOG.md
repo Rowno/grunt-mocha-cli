@@ -1,3 +1,8 @@
+### 1.0.2 (22 March, 2013) ###
+
+* Add node.js v0.10 support.
+
+
 ### 1.0.1 (7 March, 2013) ###
 
 * Use `.bin/mocha.cmd` instead of `.bin/mocha` on Windows.
