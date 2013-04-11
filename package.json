@@ -22,16 +22,16 @@
         "node": "0.10.x || 0.8.x"
     },
     "dependencies": {
-        "mocha": "1.8.x"
+        "mocha": "1.9.x"
     },
     "peerDependencies": {
         "grunt": "0.4.x"
     },
     "devDependencies": {
         "grunt": "0.4.x",
-        "grunt-contrib-jshint": "0.1.x",
+        "grunt-contrib-jshint": "0.4.x",
         "grunt-contrib-nodeunit": "0.1.x",
-        "coffee-script": "1.4.x",
+        "coffee-script": "1.6.x",
         "should": "1.2.x"
     },
     "scripts": {
