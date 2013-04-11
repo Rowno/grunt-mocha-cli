@@ -1,3 +1,9 @@
+### 1.0.3 (11 April, 2013) ###
+
+* Fix the engine warning when installing.
+* Update dependencies.
+
+
 ### 1.0.2 (22 March, 2013) ###
 
 * Add node.js v0.10 support.
