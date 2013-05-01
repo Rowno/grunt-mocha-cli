@@ -1,3 +1,8 @@
+### 1.0.4 (1 May, 2013) ###
+
+* Improve the Mocha binary path resolution.
+
+
 ### 1.0.3 (11 April, 2013) ###
 
 * Fix the engine warning when installing.
