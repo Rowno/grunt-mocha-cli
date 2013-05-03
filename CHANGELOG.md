@@ -1,3 +1,8 @@
+### 1.0.5 (3 May, 2013) ###
+
+* Improve the Mocha binary path resolution again (add Windows support).
+
+
 ### 1.0.4 (1 May, 2013) ###
 
 * Improve the Mocha binary path resolution.
