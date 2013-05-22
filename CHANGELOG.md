@@ -1,3 +1,9 @@
+### 1.0.6 (22 May, 2013) ###
+
+* Update Mocha.
+* Switch to tilde version numbers.
+
+
 ### 1.0.5 (3 May, 2013) ###
 
 * Improve the Mocha binary path resolution again (add Windows support).
