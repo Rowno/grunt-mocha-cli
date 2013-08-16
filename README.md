@@ -33,7 +33,8 @@ The list of test files to run can be specified using either the standard Grunt f
  * `bail` (boolean) - bail after first test failure.
  * `recursive` (boolean) - include sub directories.
  * `debug-brk` (boolean) - enable node's debugger breaking on the first line.
- * `ignore-leaks` (boolean) - ignore global variable leaks.
+ * `async-only` (boolean) - force all tests to take a callback (async).
+ * `check-leaks` (boolean) - check for global variable leaks.
  * `reporter` (string) - specify the reporter to use.
  * `ui` (string) - specify user-interface (bdd|tdd|exports).
  * `grep` (string) - only run tests matching pattern.
