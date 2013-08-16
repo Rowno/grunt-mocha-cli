@@ -1,4 +1,8 @@
-# Grunt Mocha CLI [![Build Status][travis-image]][travis]
+Grunt Mocha CLI
+===============
+
+[![Build Status](https://secure.travis-ci.org/Rowno/grunt-mocha-cli.png?branch=master)](http://travis-ci.org/Rowno/grunt-mocha-cli)
+[![Dependency Status](https://david-dm.org/Rowno/grunt-mocha-cli.png)](https://david-dm.org/Rowno/grunt-mocha-cli)
 
 Run [Mocha][] server-side tests in [Grunt][].
 
@@ -103,5 +107,3 @@ Copyright © 2013 Roland Warmerdam.
 [Mocha]: http://visionmedia.github.com/mocha/
 [Grunt]: http://gruntjs.com/
 [Getting Started]: http://gruntjs.com/getting-started
-[travis]: http://travis-ci.org/Rowno/grunt-mocha-cli
-[travis-image]: https://secure.travis-ci.org/Rowno/grunt-mocha-cli.png?branch=master
