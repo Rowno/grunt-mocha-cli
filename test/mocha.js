@@ -11,7 +11,7 @@ exports['sanity check'] = function (test) {
         quiet: true
     }, function (error, output) {
         test.ifError(error);
-        test.notStrictEqual(output.indexOf('1 test complete'), -1, '1 test should run');
+        test.notStrictEqual(output.indexOf('1 passing'), -1, '1 test should pass');
         test.done();
     });
 };
