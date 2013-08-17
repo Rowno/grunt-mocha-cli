@@ -1,3 +1,8 @@
+### 1.0.7 (17 August, 2013) ###
+
+* Update Mocha.
+
+
 ### 1.0.6 (22 May, 2013) ###
 
 * Update Mocha.
