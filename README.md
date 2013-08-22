@@ -3,6 +3,7 @@ Grunt Mocha CLI
 
 [![Build Status](https://secure.travis-ci.org/Rowno/grunt-mocha-cli.png?branch=master)](http://travis-ci.org/Rowno/grunt-mocha-cli)
 [![Dependency Status](https://david-dm.org/Rowno/grunt-mocha-cli.png)](https://david-dm.org/Rowno/grunt-mocha-cli)
+[![NPM version](https://badge.fury.io/js/grunt-mocha-cli.png)](https://npmjs.org/package/grunt-mocha-cli)
 
 Run [Mocha][] server-side tests in [Grunt][].
 
