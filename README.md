@@ -47,6 +47,7 @@ The list of test files to run can be specified using either the standard Grunt f
 #### Extras ####
  * `quiet` (boolean) - disable printing of Mocha's output to the terminal.
  * `files` (string|array) - glob(s) of test files to run.
+ * `force` (boolean) - continue grunt tasks even if the test suite failed
 
 
 ### Examples ###
