@@ -51,3 +51,15 @@ exports['grunt options'] = function (test) {
         test.done();
     });
 };
+
+exports['grunt force'] = function (test) {
+    test.expect(1);
+
+    grunt.util.spawn({
+        grunt: true,
+        args: ['--gruntfile', __dirname + '/fixture/force-gruntfile.js']
+    }, function (error, output, code) {
+        test.strictEqual(code, 0, 'grunt should pass');
+        test.done();
+    });
+};
