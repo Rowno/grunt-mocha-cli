@@ -1,3 +1,8 @@
+### 1.1.0 (30 August, 2013) ###
+
+* Add a `force` option to continue running Grunt tasks even if tests fail.
+
+
 ### 1.0.7 (17 August, 2013) ###
 
 * Update Mocha.
