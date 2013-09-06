@@ -115,3 +115,19 @@ exports['file glob'] = function (test) {
         test.done();
     });
 };
+
+exports['set environment variable'] = function (test) {
+    test.expect(1);
+
+    mocha({
+        files: [__dirname + '/fixture/env.js'],
+        quiet: true,
+        require: ['should'],
+        env: {
+            FOO: 'bar'
+        }
+    }, function (error) {
+        test.ifError(error, 'should set environment variable "FOO"');
+        test.done();
+    });
+};
