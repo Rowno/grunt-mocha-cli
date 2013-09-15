@@ -1,3 +1,8 @@
+### 1.2.0 (15 September, 2013) ###
+
+* Add an environment variable option.
+
+
 ### 1.1.0 (30 August, 2013) ###
 
 * Add a `force` option to continue running Grunt tasks even if tests fail.
