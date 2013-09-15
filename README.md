@@ -48,6 +48,7 @@ The list of test files to run can be specified using either the standard Grunt f
  * `quiet` (boolean) - disable printing of Mocha's output to the terminal.
  * `force` (boolean) - continue running Grunt tasks even if tests fail.
  * `files` (string|array) - glob(s) of test files to run.
+ * `env` (object) - hash of environment variables passed to the Mocha process. Default: `process.env`.
 
 
 ### Examples ###

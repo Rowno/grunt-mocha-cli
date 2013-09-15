@@ -115,3 +115,19 @@ exports['file glob'] = function (test) {
         test.done();
     });
 };
+
+exports['set environment variables'] = function (test) {
+    test.expect(1);
+
+    mocha({
+        files: [__dirname + '/fixture/env.js'],
+        quiet: true,
+        require: ['should'],
+        env: {
+            FOO: 'bar'
+        }
+    }, function (error) {
+        test.ifError(error);
+        test.done();
+    });
+};
