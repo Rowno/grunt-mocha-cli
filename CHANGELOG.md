@@ -1,3 +1,8 @@
+### 1.2.1 (15 September, 2013) ###
+
+* Always pass `process.env` to the child Mocha process.
+
+
 ### 1.2.0 (15 September, 2013) ###
 
 * Add an environment variable option.
