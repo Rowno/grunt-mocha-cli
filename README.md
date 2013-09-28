@@ -30,7 +30,7 @@ The list of test files to run can be specified using either the standard Grunt f
  * `colors` (boolean) - force enabling of colors.
  * `no-colors` (boolean) - force disabling of colors.
  * `growl` (boolean) - enable growl notification support.
- * `debug` (boolean) - enable node's debugger, synonym for node --debug.
+ * `debug` (boolean) - enable node's debugger, synonym for `node --debug`.
  * `bail` (boolean) - bail after first test failure.
  * `recursive` (boolean) - include sub directories.
  * `debug-brk` (boolean) - enable node's debugger breaking on the first line.
@@ -44,6 +44,7 @@ The list of test files to run can be specified using either the standard Grunt f
  * `slow` (string) - "slow" test threshold in milliseconds [75].
  * `globals` (array) - allow the given comma-delimited global names.
  * `compilers` (array) - use the given module(s) to compile files.
+ * `require` (array) - require the given modules.
 
 #### Extras ####
  * `quiet` (boolean) - disable printing of Mocha's output to the terminal.
