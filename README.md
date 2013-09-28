@@ -36,6 +36,7 @@ The list of test files to run can be specified using either the standard Grunt f
  * `debug-brk` (boolean) - enable node's debugger breaking on the first line.
  * `async-only` (boolean) - force all tests to take a callback (async).
  * `check-leaks` (boolean) - check for global variable leaks.
+ * `sort` (boolean) - sort test files.
  * `reporter` (string) - specify the reporter to use.
  * `ui` (string) - specify user-interface (bdd|tdd|exports).
  * `grep` (string) - only run tests matching pattern.
