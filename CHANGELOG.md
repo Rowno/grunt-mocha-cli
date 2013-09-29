@@ -1,3 +1,9 @@
+### 1.3.0 (29 September, 2013) ###
+
+* Update Mocha to version 1.13.0.
+* Add the Mocha `sort` option.
+
+
 ### 1.2.1 (15 September, 2013) ###
 
 * Always pass `process.env` to the child Mocha process.
