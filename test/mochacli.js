@@ -1,6 +1,7 @@
 'use strict';
 
 var grunt = require('grunt');
+var fs = require('fs');
 
 
 exports['grunt pass'] = function (test) {
@@ -61,5 +62,23 @@ exports['grunt force'] = function (test) {
     }, function (error, output, code) {
         test.strictEqual(code, 0, 'grunt should pass');
         test.done();
+    });
+};
+
+exports['output option'] = function (test) {
+    test.expect(2);
+
+    grunt.util.spawn({
+        grunt: true,
+        args: ['--gruntfile', __dirname + '/fixture/output-gruntfile.js']
+    }, function (error, output, code) {
+        try {
+            test.strictEqual(code, 0, 'grunt should pass');
+            var result = fs.readFileSync(__dirname + '/out.txt', 'utf8');
+            test.ok(result.match(/ok 1 fixture pass/));
+            test.done();
+        } finally {
+            fs.unlink(__dirname + '/out.txt');
+        }
     });
 };
