@@ -1,5 +1,6 @@
 'use strict';
 
+var fs = require('fs');
 var mocha = require('../lib/mocha');
 
 
@@ -129,5 +130,24 @@ exports['set environment variables'] = function (test) {
     }, function (error) {
         test.ifError(error);
         test.done();
+    });
+};
+
+exports['save mocha output'] = function (test) {
+    test.expect(2);
+
+    mocha({
+        files: [__dirname + '/fixture/pass.js'],
+        save: __dirname + '/output.txt',
+        reporter: 'tap'
+    }, function (error) {
+        try {
+            test.ifError(error);
+            var output = fs.readFileSync(__dirname + '/output.txt', 'utf8');
+            test.ok(output.match(/ok 1 fixture pass/));
+            test.done();
+        } finally {
+            fs.unlink(__dirname + '/output.txt');
+        }
     });
 };
