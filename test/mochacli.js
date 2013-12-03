@@ -63,3 +63,16 @@ exports['grunt force'] = function (test) {
         test.done();
     });
 };
+
+exports['grunt filter works'] = function (test) {
+    test.expect(2);
+
+    grunt.util.spawn({
+        grunt: true,
+        args: ['--gruntfile', __dirname + '/fixture/filter-gruntfile.js']
+    }, function (error, output, code) {
+        test.notStrictEqual(output.stdout.indexOf('1 passing'), -1, 'should pass 1 test');
+        test.strictEqual(code, 0, 'grunt should pass');
+        test.done();
+    });
+};
