@@ -38,6 +38,8 @@ The list of test files to run can be specified using either the standard Grunt f
  * `async-only` (boolean) - force all tests to take a callback (async).
  * `check-leaks` (boolean) - check for global variable leaks.
  * `sort` (boolean) - sort test files.
+ * `inline-diffs` (boolean) - display actual/expected differences inline within each string.
+ * `no-exit` (boolean) - require a clean shutdown of the event loop: mocha will not call `process.exit()`.
  * `reporter` (string) - specify the reporter to use.
  * `ui` (string) - specify user-interface (bdd|tdd|exports).
  * `grep` (string) - only run tests matching pattern.
