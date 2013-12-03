@@ -1,6 +1,7 @@
 'use strict';
 
 var mocha = require('../lib/mocha');
+var fs = require('fs');
 
 
 exports['sanity check'] = function (test) {
@@ -129,5 +130,24 @@ exports['set environment variables'] = function (test) {
     }, function (error) {
         test.ifError(error);
         test.done();
+    });
+};
+
+exports['output option'] = function (test) {
+    test.expect(2);
+
+    mocha({
+        files: [__dirname + '/fixture/pass.js'],
+        output: __dirname + '/out.txt',
+        reporter: 'tap'
+    }, function (error) {
+        try {
+            test.ifError(error);
+            var output = fs.readFileSync(__dirname + '/out.txt', 'utf8');
+            test.ok(output.match(/ok 1 fixture pass/));
+            test.done();
+        } finally {
+            fs.unlink(__dirname + '/out.txt');
+        }
     });
 };
