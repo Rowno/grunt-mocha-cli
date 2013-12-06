@@ -102,21 +102,6 @@ exports['require modules'] = function (test) {
     });
 };
 
-exports['file glob'] = function (test) {
-    test.expect(2);
-
-    mocha({
-        files: [__dirname + '/fixture/pass*.js'],
-        quiet: true,
-        reporter: 'json'
-    }, function (error, output) {
-        output = JSON.parse(output);
-        test.ifError(error);
-        test.strictEqual(output.stats.suites, 2, 'should run 2 tests');
-        test.done();
-    });
-};
-
 exports['set environment variables'] = function (test) {
     test.expect(1);
 

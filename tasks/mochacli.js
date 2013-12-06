@@ -7,14 +7,12 @@ module.exports = function (grunt) {
     grunt.registerMultiTask('mochacli', 'Run Mocha server-side tests.', function () {
         var done = this.async();
         var options = this.options();
-        var globs = [];
 
         // Use the Grunt files format if the `files` option isn't set
-        if (!options.files) {
-            this.files.forEach(function (glob) {
-                globs = globs.concat(glob.orig.src);
-            });
-            options.files = globs;
+        if (Array.isArray(options.files)) {
+            options.files = grunt.file.expand(options.files);
+        } else {
+            options.files = this.filesSrc;
         }
 
         mocha(options, function (error) {
