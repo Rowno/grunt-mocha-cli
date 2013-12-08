@@ -1,3 +1,10 @@
+### 1.4.0 (8 December, 2013) ###
+
+* Upgrade to Mocha 1.15.0.
+* Add `save` option which writes the Mocha output to a file.
+* Use `this.filesSrc` so that Grunt filters can be used.
+
+
 ### 1.3.0 (29 September, 2013) ###
 
 * Update Mocha to version 1.13.0.
