@@ -136,3 +136,16 @@ exports['save mocha output'] = function (test) {
         }
     });
 };
+
+exports['pass node.js options'] = function (test) {
+    test.expect(1);
+
+    mocha({
+        files: [__dirname + '/fixture/proxy.js'],
+        quiet: true,
+        'harmony-proxies': true
+    }, function (error) {
+        test.ifError(error);
+        test.done();
+    });
+};

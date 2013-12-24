@@ -75,3 +75,15 @@ exports['option files'] = function (test) {
         test.done();
     });
 };
+
+exports['node.js options'] = function (test) {
+    test.expect(1);
+
+    grunt.util.spawn({
+        grunt: true,
+        args: ['--gruntfile', __dirname + '/fixture/option-nodejs-gruntfile.js']
+    }, function (error, output, code) {
+        test.strictEqual(code, 0, 'grunt should pass');
+        test.done();
+    });
+};
