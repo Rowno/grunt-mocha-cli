@@ -48,6 +48,13 @@ The list of test files to run can be specified using either the standard Grunt f
  * `globals` (array) - allow the given comma-delimited global names.
  * `compilers` (array) - use the given module(s) to compile files.
  * `require` (array) - require the given modules.
+ * `expose-gc` (boolean) - expose gc extension, synonym for `node --expose-gc`.
+ * `gc-global` (boolean) - always perform global GCs, synonym for `node --gc-global`.
+ * `harmony` (boolean) - enable all harmony features (except typeof), synonym for `node --harmony`.
+ * `harmony-proxies` (boolean) - enable harmony proxies, synonym for `node --harmony-proxies`.
+ * `harmony-collections` (boolean) - enable harmony collections, synonym for `node --harmony-collections`.
+ * `harmony-generators` (boolean) - enable harmony generators, synonym for `node --harmony-generators`.
+ * `prof` (boolean) - log statistical profiling information, synonym for `node --prof`.
 
 #### Extras ####
  * `quiet` (boolean) - disable printing of Mocha's output to the terminal.
