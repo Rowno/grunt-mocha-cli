@@ -1,3 +1,9 @@
+### 1.5.0 (4 January, 2014) ###
+
+* Upgrade to Mocha 1.16.2.
+* Add support for specifying node options.
+
+
 ### 1.4.0 (8 December, 2013) ###
 
 * Upgrade to Mocha 1.15.0.
