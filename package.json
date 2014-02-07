@@ -25,17 +25,17 @@
     "node": "~0.10.0 || ~0.8.0"
   },
   "dependencies": {
-    "mocha": "~1.16.2"
+    "mocha": "~1.17.1"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"
   },
   "devDependencies": {
-    "coffee-script": "~1.6.3",
-    "grunt": "~0.4.1",
+    "coffee-script": "~1.7.1",
+    "grunt": "~0.4.2",
     "grunt-contrib-jshint": "~0.8.0",
-    "grunt-contrib-nodeunit": "~0.2.0",
-    "should": "~2.1.0"
+    "grunt-contrib-nodeunit": "~0.3.0",
+    "should": "~3.1.2"
   },
   "scripts": {
     "test": "grunt test"
