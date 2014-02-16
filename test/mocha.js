@@ -79,7 +79,7 @@ exports['set array option'] = function (test) {
         files: [__dirname + '/fixture/coffeescript.coffee'],
         quiet: true,
         reporter: 'json',
-        compilers: ['coffee:coffee-script']
+        compilers: ['coffee:coffee-script/register']
     }, function (error) {
         test.ifError(error, 'should compile the coffeescript');
         test.done();
