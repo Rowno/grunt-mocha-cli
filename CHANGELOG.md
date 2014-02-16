@@ -1,3 +1,8 @@
+### 1.6.0 (16 February, 2014) ###
+
+* Upgrade to Mocha 1.17.1.
+
+
 ### 1.5.0 (4 January, 2014) ###
 
 * Upgrade to Mocha 1.16.2.
