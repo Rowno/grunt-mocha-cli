@@ -52,7 +52,7 @@ exports['grunt options'] = function (test) {
     });
 };
 
-exports['option force'] = function (test) {
+exports['force option'] = function (test) {
     test.expect(1);
 
     grunt.util.spawn({
@@ -64,7 +64,7 @@ exports['option force'] = function (test) {
     });
 };
 
-exports['option files'] = function (test) {
+exports['files option'] = function (test) {
     test.expect(1);
 
     grunt.util.spawn({

@@ -41,7 +41,7 @@ exports['mocha fail'] = function (test) {
     });
 };
 
-exports['set string option'] = function (test) {
+exports['set mocha option of type string'] = function (test) {
     test.expect(2);
 
     mocha({
@@ -57,7 +57,7 @@ exports['set string option'] = function (test) {
     });
 };
 
-exports['set bool option'] = function (test) {
+exports['set mocha option of type bool'] = function (test) {
     test.expect(1);
 
     mocha({
@@ -72,8 +72,8 @@ exports['set bool option'] = function (test) {
     });
 };
 
-exports['set array option'] = function (test) {
     test.expect(1);
+exports['set mocha option of type array'] = function (test) {
 
     mocha({
         files: [__dirname + '/fixture/coffeescript.coffee'],
@@ -102,7 +102,7 @@ exports['require modules'] = function (test) {
     });
 };
 
-exports['set environment variables'] = function (test) {
+exports['env option'] = function (test) {
     test.expect(1);
 
     mocha({
@@ -118,7 +118,7 @@ exports['set environment variables'] = function (test) {
     });
 };
 
-exports['save mocha output'] = function (test) {
+exports['save option'] = function (test) {
     test.expect(2);
 
     mocha({
