@@ -47,12 +47,10 @@ exports['set mocha option of type string'] = function (test) {
     mocha({
         files: [__dirname + '/fixture/pass.js'],
         quiet: true,
-        reporter: 'json'
+        reporter: 'tap'
     }, function (error, output) {
         test.ifError(error);
-        test.doesNotThrow(function () {
-            JSON.parse(output);
-        }, SyntaxError, 'should return valid JSON');
+        test.ok(output.match(/# pass 1/), 'expect 1 pass');
         test.done();
     });
 };
@@ -63,25 +61,25 @@ exports['set mocha option of type bool'] = function (test) {
     mocha({
         files: [__dirname + '/fixture/fail.js'],
         quiet: true,
-        reporter: 'json',
+        reporter: 'tap',
         bail: true
     }, function (error, output) {
-        output = JSON.parse(output);
-        test.strictEqual(output.stats.tests, 1, 'should run only 1 test');
+        test.ok(output.match(/# fail 1/), 'expect 1 fail');
         test.done();
     });
 };
 
-    test.expect(1);
 exports['set mocha option of type array'] = function (test) {
+    test.expect(2);
 
     mocha({
         files: [__dirname + '/fixture/coffeescript.coffee'],
         quiet: true,
-        reporter: 'json',
+        reporter: 'tap',
         compilers: ['coffee:coffee-script/register']
-    }, function (error) {
+    }, function (error, output) {
         test.ifError(error, 'should compile the coffeescript');
+        test.ok(output.match(/# pass 1/), 'expect 1 pass');
         test.done();
     });
 };
@@ -92,12 +90,11 @@ exports['require modules'] = function (test) {
     mocha({
         files: [__dirname + '/fixture/require.js'],
         quiet: true,
-        reporter: 'json',
+        reporter: 'tap',
         require: ['should']
     }, function (error, output) {
-        output = JSON.parse(output);
         test.ifError(error);
-        test.strictEqual(output.stats.passes, 1, 'should require modules');
+        test.ok(output.match(/# pass 1/), 'expect 1 pass');
         test.done();
     });
 };
@@ -129,7 +126,7 @@ exports['save option'] = function (test) {
         try {
             test.ifError(error);
             var output = fs.readFileSync(__dirname + '/output.txt', 'utf8');
-            test.ok(output.match(/ok 1 fixture pass/));
+            test.ok(output.match(/# pass 1/), 'expect 1 pass');
             test.done();
         } finally {
             fs.unlink(__dirname + '/output.txt');
