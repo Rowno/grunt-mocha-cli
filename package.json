@@ -1,26 +1,21 @@
 {
   "name": "grunt-mocha-cli",
-  "description": "Run Mocha server-side tests in Grunt.",
   "version": "1.6.0",
+  "description": "Run Mocha server-side tests in Grunt.",
   "author": "Roland Warmerdam (http://rolandwarmerdam.co.nz)",
   "keywords": [
     "gruntplugin",
     "mocha"
   ],
   "homepage": "https://github.com/Rowno/grunt-mocha-cli",
+  "bugs": {
+    "url": "https://github.com/Rowno/grunt-mocha-cli/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Rowno/grunt-mocha-cli.git"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://raw.github.com/Rowno/grunt-mocha-cli/master/LICENSE"
-    }
-  ],
-  "bugs": {
-    "url": "https://github.com/Rowno/grunt-mocha-cli/issues"
-  },
+  "license": "MIT",
   "engines": {
     "node": "~0.10.0 || ~0.8.0"
   },
