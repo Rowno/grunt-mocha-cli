@@ -133,3 +133,32 @@ exports['save option'] = function (test) {
         }
     });
 };
+
+exports['filesRaw option'] = function (test) {
+    test.expect(2);
+
+    mocha({
+        filesRaw: [__dirname + '/fixture/pass*.js'],
+        quiet: true,
+        reporter: 'tap'
+    }, function (error, output) {
+        test.ifError(error);
+        test.ok(output.match(/# pass 2/), 'expect 2 pass');
+        test.done();
+    });
+};
+
+exports['combine files and filesRaw options'] = function (test) {
+    test.expect(2);
+
+    mocha({
+        files: [__dirname + '/fixture/fail.js'],
+        filesRaw: [__dirname + '/fixture/pass*.js'],
+        quiet: true,
+        reporter: 'tap'
+    }, function (error, output) {
+        test.ok(output.match(/# fail 1/), 'expect 1 fail');
+        test.ok(output.match(/# pass 2/), 'expect 2 pass');
+        test.done();
+    });
+};
