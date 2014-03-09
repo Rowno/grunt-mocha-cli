@@ -1,3 +1,9 @@
+### 1.7.0 (9 March, 2014) ###
+
+* Add a `filesRaw` option which passes globs directly to Mocha.
+* Improve the unit tests.
+
+
 ### 1.6.0 (16 February, 2014) ###
 
 * Upgrade to Mocha 1.17.1.
