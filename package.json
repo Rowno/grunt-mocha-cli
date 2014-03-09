@@ -7,10 +7,6 @@
     "gruntplugin",
     "mocha"
   ],
-  "homepage": "https://github.com/Rowno/grunt-mocha-cli",
-  "bugs": {
-    "url": "https://github.com/Rowno/grunt-mocha-cli/issues"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Rowno/grunt-mocha-cli.git"
