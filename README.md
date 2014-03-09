@@ -26,7 +26,7 @@ All of the Mocha command line options are supported, plus some extras.
 
 The list of test files to run can be specified using either the standard Grunt format or by using the `files` option. If neither is specified, the Mocha default will be used (`test/*.js`).
 
-**Warming:** If you have a large number of test files, you should use the `filesRaw` option and *not* the standard Grunt format or the `files` option. Otherwise you risk hitting the operating system command line length limit.
+**Warning:** If you have a large number of test files, you should use the `filesRaw` option and *not* the standard Grunt format or the `files` option. Otherwise you risk hitting the operating system command line length limit.
 
 #### Mocha Options ####
  * `invert` (boolean) - inverts `grep` matches.
