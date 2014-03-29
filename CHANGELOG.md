@@ -1,3 +1,8 @@
+### 1.8.0 (29 March, 2014) ###
+
+* Upgrade to Mocha 1.18.2.
+
+
 ### 1.7.0 (9 March, 2014) ###
 
 * Add a `filesRaw` option which passes globs directly to Mocha.
