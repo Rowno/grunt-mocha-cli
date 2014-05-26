@@ -29,6 +29,7 @@ The list of test files to run can be specified using either the standard Grunt f
 **Warning:** If you have a large number of test files, you should use the `filesRaw` option and *not* the standard Grunt format or the `files` option. Otherwise you risk hitting the operating system command line length limit.
 
 #### Mocha Options ####
+ * `ndebug` (boolean) - launches mocha with debug (note: not --debug)
  * `invert` (boolean) - inverts `grep` matches.
  * `colors` (boolean) - force enabling of colors.
  * `no-colors` (boolean) - force disabling of colors.
