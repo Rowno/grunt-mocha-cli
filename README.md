@@ -1,8 +1,8 @@
 Grunt Mocha CLI
 ===============
 
-[![Build Status](https://secure.travis-ci.org/Rowno/grunt-mocha-cli.png?branch=master)](http://travis-ci.org/Rowno/grunt-mocha-cli)
-[![Dependency Status](https://david-dm.org/Rowno/grunt-mocha-cli.png)](https://david-dm.org/Rowno/grunt-mocha-cli)
+[![Build Status](https://api.travis-ci.org/Rowno/grunt-mocha-cli.svg?branch=master)](https://travis-ci.org/Rowno/grunt-mocha-cli)
+[![Dependency Status](https://david-dm.org/Rowno/grunt-mocha-cli.svg)](https://david-dm.org/Rowno/grunt-mocha-cli)
 
 [![NPM](https://nodei.co/npm/grunt-mocha-cli.png?downloads=true&stars=true)](https://npmjs.org/package/grunt-mocha-cli)
 
