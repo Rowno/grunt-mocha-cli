@@ -1,3 +1,10 @@
+### 1.9.0 (14 June, 2014) ###
+
+* Upgrade to Mocha 1.20.1.
+* Drop Node 0.8 support and start testing on Node 0.11
+* Add `ndebug` option to use node's debugger (`node debug`).
+
+
 ### 1.8.0 (29 March, 2014) ###
 
 * Upgrade to Mocha 1.18.2.
