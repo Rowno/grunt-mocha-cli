@@ -29,49 +29,49 @@ The list of test files to run can be specified using either the standard Grunt f
 **Warning:** If you have a large number of test files, you should use the `filesRaw` option and *not* the standard Grunt format or the `files` option. Otherwise you risk hitting the operating system command line length limit.
 
 #### Mocha Options ####
- * `invert` (boolean) - inverts `grep` matches.
- * `colors` (boolean) - force enabling of colors.
- * `no-colors` (boolean) - force disabling of colors.
- * `growl` (boolean) - enable growl notification support.
- * `bail` (boolean) - bail after first test failure.
- * `recursive` (boolean) - include sub directories.
- * `ndebug` (boolean) - use node's debugger, synonym for `node debug`.
- * `debug` (boolean) - enable node's debugger, synonym for `node --debug`.
- * `debug-brk` (boolean) - enable node's debugger breaking on the first line.
  * `async-only` (boolean) - force all tests to take a callback (async).
+ * `bail` (boolean) - bail after first test failure.
  * `check-leaks` (boolean) - check for global variable leaks.
- * `sort` (boolean) - sort test files.
- * `inline-diffs` (boolean) - display actual/expected differences inline within each string.
- * `no-exit` (boolean) - require a clean shutdown of the event loop: mocha will not call `process.exit()`.
- * `reporter` (string) - specify the reporter to use.
- * `ui` (string) - specify user-interface (bdd|tdd|exports).
- * `grep` (string) - only run tests matching pattern.
- * `timeout` (string) - set test-case timeout in milliseconds [2000].
- * `slow` (string) - "slow" test threshold in milliseconds [75].
- * `opts` (string) - specify opts path.
- * `globals` (array) - allow the given comma-delimited global names.
+ * `colors` (boolean) - force enabling of colors.
  * `compilers` (array) - use the given module(s) to compile files.
- * `require` (array) - require the given modules.
+ * `debug-brk` (boolean) - enable node's debugger breaking on the first line.
+ * `debug` (boolean) - enable node's debugger, synonym for `node --debug`.
  * `expose-gc` (boolean) - expose gc extension, synonym for `node --expose-gc`.
  * `gc-global` (boolean) - always perform global GCs, synonym for `node --gc-global`.
- * `harmony` (boolean) - enable all harmony features (except typeof), synonym for `node --harmony`.
- * `harmony-proxies` (boolean) - enable harmony proxies, synonym for `node --harmony-proxies`.
+ * `globals` (array) - allow the given comma-delimited global names.
+ * `grep` (string) - only run tests matching pattern.
+ * `growl` (boolean) - enable growl notification support.
  * `harmony-collections` (boolean) - enable harmony collections, synonym for `node --harmony-collections`.
  * `harmony-generators` (boolean) - enable harmony generators, synonym for `node --harmony-generators`.
- * `prof` (boolean) - log statistical profiling information, synonym for `node --prof`.
+ * `harmony-proxies` (boolean) - enable harmony proxies, synonym for `node --harmony-proxies`.
+ * `harmony` (boolean) - enable all harmony features (except typeof), synonym for `node --harmony`.
+ * `inline-diffs` (boolean) - display actual/expected differences inline within each string.
+ * `invert` (boolean) - inverts `grep` matches.
+ * `ndebug` (boolean) - use node's debugger, synonym for `node debug`.
+ * `no-colors` (boolean) - force disabling of colors.
  * `no-deprecation` (boolean) - silence deprecation warnings.
+ * `no-exit` (boolean) - require a clean shutdown of the event loop: mocha will not call `process.exit()`.
  * `no-timeouts` (boolean) - disables timeouts, given implicitly with `debug`.
+ * `opts` (string) - specify opts path.
+ * `prof` (boolean) - log statistical profiling information, synonym for `node --prof`.
+ * `recursive` (boolean) - include sub directories.
+ * `reporter` (string) - specify the reporter to use.
+ * `require` (array) - require the given modules.
+ * `slow` (string) - "slow" test threshold in milliseconds [75].
+ * `sort` (boolean) - sort test files.
  * `throw-deprecation` (boolean) - throw an exception anytime a deprecated function is used.
- * `trace` (boolean) - trace function calls.
+ * `timeout` (string) - set test-case timeout in milliseconds [2000].
  * `trace-deprecation` (boolean) - show stack traces on deprecations.
+ * `trace` (boolean) - trace function calls.
+ * `ui` (string) - specify user-interface (bdd|tdd|exports).
 
 #### Extras ####
- * `quiet` (boolean) - disable printing of Mocha's output to the terminal.
- * `force` (boolean) - continue running Grunt tasks even if tests fail.
- * `save` (string) - write the mocha output to a file.
+ * `env` (object) - hash of additional environment variables to pass to the Mocha process.
  * `files` (array) - globs of test files to run.
  * `filesRaw` (array) - globs of test files to run. These globs are passed directly to Mocha and aren't expanded by Grunt first.
- * `env` (object) - hash of additional environment variables to pass to the Mocha process.
+ * `force` (boolean) - continue running Grunt tasks even if tests fail.
+ * `quiet` (boolean) - disable printing of Mocha's output to the terminal.
+ * `save` (string) - write the mocha output to a file.
 
 
 ### Examples ###
