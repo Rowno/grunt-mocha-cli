@@ -1,97 +1,67 @@
-### 1.9.0 (14 June, 2014) ###
+# Changelog
+All notable changes to this project will be documented in this file.
+This project follows [Semantic Versioning](http://semver.org).
 
-* Upgrade to Mocha 1.20.1.
-* Drop Node 0.8 support and start testing on Node 0.11
-* Add `ndebug` option to use node's debugger (`node debug`).
+## 1.9.0 / 2014-06-14
+ - change: upgrade to Mocha 1.20.1.
+ - remove: Node 0.8 support.
+ - add: Node 0.11 support.
+ - add: `ndebug` option to use node's debugger (`node debug`).
 
+## 1.8.0 / 2014-03-29
+ - change: upgrade to Mocha 1.18.2.
 
-### 1.8.0 (29 March, 2014) ###
+## 1.7.0 / 2014-03-09
+ - add: `filesRaw` option which passes globs directly to Mocha.
+ - change: improve the unit tests.
 
-* Upgrade to Mocha 1.18.2.
+## 1.6.0 / 2014-02-16
+ - change: upgrade to Mocha 1.17.1.
 
+## 1.5.0 / 2014-01-04
+ - change: upgrade to Mocha 1.16.2.
+ - add: support for specifying node options.
 
-### 1.7.0 (9 March, 2014) ###
+## 1.4.0 / 2013-12-08
+ - change: upgrade to Mocha 1.15.0.
+ - add: `save` option which writes the Mocha output to a file.
+ - fix: use `this.filesSrc` so that Grunt filters can be used.
 
-* Add a `filesRaw` option which passes globs directly to Mocha.
-* Improve the unit tests.
+## 1.3.0 / 2013-09-29
+ - change: update Mocha to version 1.13.0.
+ - add: Mocha `sort` option.
 
+## 1.2.1 / 2013-09-15
+ - fix: always pass `process.env` to the child Mocha process.
 
-### 1.6.0 (16 February, 2014) ###
+## 1.2.0 / 2013-09-15
+ - add: environment variable option.
 
-* Upgrade to Mocha 1.17.1.
+## 1.1.0 / 2013-08-30
+ - add: `force` option to continue running Grunt tasks even if tests fail.
 
+## 1.0.7 / 2013-08-17
+ - change: update Mocha.
 
-### 1.5.0 (4 January, 2014) ###
+## 1.0.6 / 2013-05-22
+ - change: update Mocha.
+ - change: switch to tilde version numbers.
 
-* Upgrade to Mocha 1.16.2.
-* Add support for specifying node options.
+## 1.0.5 / 2013-05-03
+ - fix: improve the Mocha binary path resolution again (add Windows support).
 
+## 1.0.4 / 2013-05-01
+ - fix: improve the Mocha binary path resolution.
 
-### 1.4.0 (8 December, 2013) ###
+## 1.0.3 / 2013-04-11
+ - fix: engine warning when installing.
+ - change: dependencies.
 
-* Upgrade to Mocha 1.15.0.
-* Add `save` option which writes the Mocha output to a file.
-* Use `this.filesSrc` so that Grunt filters can be used.
+## 1.0.2 / 2013-03-22
+ - add: Node 0.10 support.
 
+## 1.0.1 / 2013-03-07
+ - fix: use `.bin/mocha.cmd` instead of `.bin/mocha` on Windows.
 
-### 1.3.0 (29 September, 2013) ###
-
-* Update Mocha to version 1.13.0.
-* Add the Mocha `sort` option.
-
-
-### 1.2.1 (15 September, 2013) ###
-
-* Always pass `process.env` to the child Mocha process.
-
-
-### 1.2.0 (15 September, 2013) ###
-
-* Add an environment variable option.
-
-
-### 1.1.0 (30 August, 2013) ###
-
-* Add a `force` option to continue running Grunt tasks even if tests fail.
-
-
-### 1.0.7 (17 August, 2013) ###
-
-* Update Mocha.
-
-
-### 1.0.6 (22 May, 2013) ###
-
-* Update Mocha.
-* Switch to tilde version numbers.
-
-
-### 1.0.5 (3 May, 2013) ###
-
-* Improve the Mocha binary path resolution again (add Windows support).
-
-
-### 1.0.4 (1 May, 2013) ###
-
-* Improve the Mocha binary path resolution.
-
-
-### 1.0.3 (11 April, 2013) ###
-
-* Fix the engine warning when installing.
-* Update dependencies.
-
-
-### 1.0.2 (22 March, 2013) ###
-
-* Add node.js v0.10 support.
-
-
-### 1.0.1 (7 March, 2013) ###
-
-* Use `.bin/mocha.cmd` instead of `.bin/mocha` on Windows.
-
-
-### 1.0.0 (19 February, 2013) ###
-
-* Initial release.
+## 1.0.0 / 2013-02-19
+ - add: initial release.
