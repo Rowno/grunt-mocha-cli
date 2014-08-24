@@ -48,6 +48,7 @@ The list of test files to run can be specified using either the standard Grunt f
  * `grep` (string) - only run tests matching pattern.
  * `timeout` (string) - set test-case timeout in milliseconds [2000].
  * `slow` (string) - "slow" test threshold in milliseconds [75].
+ * `opts` (string) - specify opts path.
  * `globals` (array) - allow the given comma-delimited global names.
  * `compilers` (array) - use the given module(s) to compile files.
  * `require` (array) - require the given modules.
@@ -58,6 +59,11 @@ The list of test files to run can be specified using either the standard Grunt f
  * `harmony-collections` (boolean) - enable harmony collections, synonym for `node --harmony-collections`.
  * `harmony-generators` (boolean) - enable harmony generators, synonym for `node --harmony-generators`.
  * `prof` (boolean) - log statistical profiling information, synonym for `node --prof`.
+ * `no-deprecation` (boolean) - silence deprecation warnings.
+ * `no-timeouts` (boolean) - disables timeouts, given implicitly with `debug`.
+ * `throw-deprecation` (boolean) - throw an exception anytime a deprecated function is used.
+ * `trace` (boolean) - trace function calls.
+ * `trace-deprecation` (boolean) - show stack traces on deprecations.
 
 #### Extras ####
  * `quiet` (boolean) - disable printing of Mocha's output to the terminal.
