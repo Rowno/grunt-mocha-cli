@@ -13,19 +13,19 @@
     "node": ">= 0.10.x"
   },
   "dependencies": {
-    "mocha": "~1.21.4"
+    "mocha": "~2.0.1"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"
   },
   "devDependencies": {
-    "coffee-script": "~1.7.1",
+    "coffee-script": "~1.8.0",
     "grunt": "~0.4.2",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-nodeunit": "~0.4.0",
-    "jshint-stylish": "~0.4.0",
-    "load-grunt-tasks": "~0.6.0",
-    "should": "~4.0.4"
+    "jshint-stylish": "~1.0.0",
+    "load-grunt-tasks": "~1.0.0",
+    "should": "~4.2.1"
   },
   "scripts": {
     "test": "grunt test"
