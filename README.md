@@ -66,6 +66,7 @@ The list of test files to run can be specified using either the standard Grunt f
  * `trace-deprecation` (boolean) - show stack traces on deprecations.
  * `trace` (boolean) - trace function calls.
  * `ui` (string) - specify user-interface (bdd|tdd|exports).
+ * `watch` (boolean) - watch files for changes.
 
 #### Extras ####
  * `env` (object) - hash of additional environment variables to pass to the Mocha process.
