@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project follows [Semantic Versioning](http://semver.org).
 
+## 1.13.0 / 2015-04-01
+ - change: upgrade to Mocha 2.2.1.
+ - change: upgrade the devDependencies.
+
 ## 1.12.0 / 2015-01-09
  - change: upgrade to Mocha 2.1.0.
  - change: upgrade the devDependencies.
