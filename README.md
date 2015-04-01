@@ -38,17 +38,22 @@ The list of test files to run can be specified using either the standard Grunt f
  * `compilers` (array) - use the given module(s) to compile files.
  * `debug-brk` (boolean) - enable node's debugger breaking on the first line.
  * `debug` (boolean) - enable node's debugger, synonym for `node --debug`.
+ * `delay` (boolean) - wait for async suite definition.
  * `expose-gc` (boolean) - expose gc extension, synonym for `node --expose-gc`.
+ * `fgrep` (string) - only run tests containing <string>.
  * `gc-global` (boolean) - always perform global GCs, synonym for `node --gc-global`.
  * `globals` (array) - allow the given comma-delimited global names.
- * `grep` (string) - only run tests matching pattern.
+ * `grep` (string) - only run tests matching <pattern>.
  * `growl` (boolean) - enable growl notification support.
- * `harmony-collections` (boolean) - enable harmony collections, synonym for `node --harmony-collections`.
+ * `harmony_arrow_functions` (boolean) - enable "harmony arrow functions" (iojs), synonym for `node --harmony_arrow_functions`.
+ * `harmony_proxies` (boolean) - enable "harmony proxies" (iojs), synonym for `node --harmony_proxies`.
+ * `harmony_shipping` (boolean) - enable all shipped harmony fetaures (iojs), synonym for `node --harmony_shipping`.
+ * `harmony-collections` (boolean) - enable harmony collections (sets, maps, and weak maps), synonym for `node --harmony-collections`.
  * `harmony-generators` (boolean) - enable harmony generators, synonym for `node --harmony-generators`.
  * `harmony-proxies` (boolean) - enable harmony proxies, synonym for `node --harmony-proxies`.
  * `harmony` (boolean) - enable all harmony features (except typeof), synonym for `node --harmony`.
  * `inline-diffs` (boolean) - display actual/expected differences inline within each string.
- * `invert` (boolean) - inverts `grep` matches.
+ * `invert` (boolean) - inverts `grep` and `fgrep` matches.
  * `ndebug` (boolean) - use node's debugger, synonym for `node debug`.
  * `no-colors` (boolean) - force disabling of colors.
  * `no-deprecation` (boolean) - silence deprecation warnings.
