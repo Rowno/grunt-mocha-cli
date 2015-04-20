@@ -77,6 +77,7 @@ The list of test files to run can be specified using either the standard Grunt f
  * `files` (array) - globs of test files to run.
  * `filesRaw` (array) - globs of test files to run. These globs are passed directly to Mocha and aren't expanded by Grunt first.
  * `force` (boolean) - continue running Grunt tasks even if tests fail.
+ * `inspector` (boolean) - start tests with node-inspector's debugger
  * `quiet` (boolean) - disable printing of Mocha's output to the terminal.
  * `save` (string) - write the mocha output to a file.
 
