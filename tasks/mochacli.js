@@ -2,6 +2,12 @@
 
 var mocha = require('../lib/mocha');
 
+var _filesExist = function(files) {
+    return (
+        (files instanceof Array && files.length > 0) ||
+        (files instanceof String && files.length > 0)
+    );
+};
 
 module.exports = function (grunt) {
     grunt.registerMultiTask('mochacli', 'Run Mocha server-side tests.', function () {
@@ -15,8 +21,13 @@ module.exports = function (grunt) {
             options.files = this.filesSrc;
         }
 
-        mocha(options, function (error) {
-            done(options.force ? true : error);
-        });
+        // Don't run mocha if there isn't any file specified
+        if (_filesExist(options.files)) {
+            mocha(options, function (error) {
+                done(options.force ? true : error);
+            });
+        } else {
+            done(true);
+        }
     });
 };
