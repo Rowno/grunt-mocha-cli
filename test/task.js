@@ -76,3 +76,16 @@ exports['files option'] = function (test) {
         test.done();
     });
 };
+
+exports['missing files'] = function (test) {
+    test.expect(2);
+
+    grunt.util.spawn({
+        grunt: true,
+        args: ['--gruntfile', path.resolve(__dirname, 'fixture/missing-files-gruntfile.js')]
+    }, function (error, output, code) {
+        test.notStrictEqual(output.stdout.indexOf('1 passing'), -1, 'should pass 1 test');
+        test.strictEqual(code, 0, 'grunt should pass');
+        test.done();
+    });
+};
