@@ -15,9 +15,6 @@
   "dependencies": {
     "mocha": "~2.2.1"
   },
-  "peerDependencies": {
-    "grunt": "~0.4.1"
-  },
   "devDependencies": {
     "coffee-script": "~1.9.1",
     "grunt": "~0.4.2",
