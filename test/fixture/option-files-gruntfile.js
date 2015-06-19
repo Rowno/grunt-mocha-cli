@@ -1,15 +1,18 @@
 'use strict';
 
+var path = require('path');
+
+
 module.exports = function (grunt) {
     grunt.initConfig({
         mochacli: {
             options: {
-                files: [__dirname + '/pass*.js']
+                files: [path.resolve(__dirname, 'pass*.js')]
             }
         }
     });
 
-    grunt.loadTasks(__dirname + '/../../tasks');
+    grunt.loadTasks(path.resolve(__dirname, '../../tasks'));
 
     grunt.registerTask('default', 'mochacli');
 };

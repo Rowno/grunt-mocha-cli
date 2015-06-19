@@ -1,5 +1,6 @@
 'use strict';
 
+var path = require('path');
 var fs = require('fs');
 var mocha = require('../lib/mocha');
 
@@ -8,7 +9,7 @@ exports['sanity check'] = function (test) {
     test.expect(2);
 
     mocha({
-        files: [__dirname + '/fixture/pass.js'],
+        files: [path.resolve(__dirname, 'fixture/pass.js')],
         quiet: true
     }, function (error, output) {
         test.ifError(error);
@@ -21,7 +22,7 @@ exports['mocha pass'] = function (test) {
     test.expect(1);
 
     mocha({
-        files: [__dirname + '/fixture/pass.js'],
+        files: [path.resolve(__dirname, 'fixture/pass.js')],
         quiet: true
     }, function (error) {
         test.ok(!error, 'mocha should pass');
@@ -33,7 +34,7 @@ exports['mocha fail'] = function (test) {
     test.expect(1);
 
     mocha({
-        files: [__dirname + '/fixture/fail.js'],
+        files: [path.resolve(__dirname, 'fixture/fail.js')],
         quiet: true
     }, function (error) {
         test.ok(error, 'mocha should fail');
@@ -45,7 +46,7 @@ exports['set mocha option of type string'] = function (test) {
     test.expect(2);
 
     mocha({
-        files: [__dirname + '/fixture/pass.js'],
+        files: [path.resolve(__dirname, 'fixture/pass.js')],
         quiet: true,
         reporter: 'tap'
     }, function (error, output) {
@@ -59,7 +60,7 @@ exports['set mocha option of type bool'] = function (test) {
     test.expect(1);
 
     mocha({
-        files: [__dirname + '/fixture/fail.js'],
+        files: [path.resolve(__dirname, 'fixture/fail.js')],
         quiet: true,
         reporter: 'tap',
         bail: true
@@ -73,7 +74,7 @@ exports['set mocha option of type array'] = function (test) {
     test.expect(2);
 
     mocha({
-        files: [__dirname + '/fixture/coffeescript.coffee'],
+        files: [path.resolve(__dirname, 'fixture/coffeescript.coffee')],
         quiet: true,
         reporter: 'tap',
         compilers: ['coffee:coffee-script/register']
@@ -88,7 +89,7 @@ exports['require modules'] = function (test) {
     test.expect(2);
 
     mocha({
-        files: [__dirname + '/fixture/require.js'],
+        files: [path.resolve(__dirname, 'fixture/require.js')],
         quiet: true,
         reporter: 'tap',
         require: ['should']
@@ -103,7 +104,7 @@ exports['env option'] = function (test) {
     test.expect(1);
 
     mocha({
-        files: [__dirname + '/fixture/env.js'],
+        files: [path.resolve(__dirname, 'fixture/env.js')],
         quiet: true,
         require: ['should'],
         env: {
@@ -119,17 +120,17 @@ exports['save option'] = function (test) {
     test.expect(2);
 
     mocha({
-        files: [__dirname + '/fixture/pass.js'],
-        save: __dirname + '/output.txt',
+        files: [path.resolve(__dirname, 'fixture/pass.js')],
+        save: path.resolve(__dirname, 'output.txt'),
         reporter: 'tap'
     }, function (error) {
         try {
             test.ifError(error);
-            var output = fs.readFileSync(__dirname + '/output.txt', 'utf8');
+            var output = fs.readFileSync(path.resolve(__dirname, 'output.txt'), 'utf8');
             test.ok(output.match(/# pass 1/), 'expect 1 pass');
             test.done();
         } finally {
-            fs.unlink(__dirname + '/output.txt');
+            fs.unlink(path.resolve(__dirname, 'output.txt'));
         }
     });
 };
@@ -138,7 +139,7 @@ exports['filesRaw option'] = function (test) {
     test.expect(2);
 
     mocha({
-        filesRaw: [__dirname + '/fixture/pass*.js'],
+        filesRaw: [path.resolve(__dirname, 'fixture/pass*.js')],
         quiet: true,
         reporter: 'tap'
     }, function (error, output) {
@@ -152,8 +153,8 @@ exports['combine files and filesRaw options'] = function (test) {
     test.expect(2);
 
     mocha({
-        files: [__dirname + '/fixture/fail.js'],
-        filesRaw: [__dirname + '/fixture/pass*.js'],
+        files: [path.resolve(__dirname, 'fixture/fail.js')],
+        filesRaw: [path.resolve(__dirname, 'fixture/pass*.js')],
         quiet: true,
         reporter: 'tap'
     }, function (error, output) {
