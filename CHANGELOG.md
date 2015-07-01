@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 This project follows [Semantic Versioning](http://semver.org).
 
+## 1.13.1 / 2015-07-01
+ - change: don't run mocha if there aren't any files.
+ - change: upgrade the devDependencies.
+ - remove: peerDependencies.
+ - change: switch to eslint.
+
 ## 1.13.0 / 2015-04-01
  - change: upgrade to Mocha 2.2.1.
  - change: upgrade the devDependencies.
