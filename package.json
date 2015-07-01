@@ -16,12 +16,12 @@
     "mocha": "~2.2.1"
   },
   "devDependencies": {
-    "coffee-script": "~1.9.1",
-    "grunt": "~0.4.2",
-    "grunt-eslint": "~15.0.0",
-    "grunt-contrib-nodeunit": "~0.4.0",
-    "load-grunt-tasks": "~3.1.0",
-    "should": "~5.2.0"
+    "coffee-script": "^1.9.1",
+    "grunt": "^0.4.2",
+    "grunt-contrib-nodeunit": "^0.4.0",
+    "grunt-eslint": "^16.0.0",
+    "load-grunt-tasks": "^3.2.0",
+    "should": "^7.0.1"
   },
   "scripts": {
     "test": "grunt test"
