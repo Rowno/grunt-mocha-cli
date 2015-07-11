@@ -163,3 +163,27 @@ exports['combine files and filesRaw options'] = function (test) {
         test.done();
     });
 };
+
+exports['compose reporter options'] = function (test) {
+    test.expect(4);
+
+    mocha({
+        files: [path.resolve(__dirname, 'fixture/pass.js')],
+        reporter: 'xunit',
+        'reporter-options': {
+            output: path.resolve(__dirname, 'output.xml')
+        }
+    }, function (error) {
+        try {
+            test.ifError(error);
+            var output = fs.readFileSync(path.resolve(__dirname, 'output.xml'), 'utf8');
+            test.ok(output.match(/\<testsuite name\=/), 'expect testsuite start tag');
+            test.ok(output.match(/\<\/testsuite\>/), 'expect testsuite end tag');
+            test.ok(output.match(/\<testcase/), 'expect testcase tag');
+            test.done();
+        } finally {
+            fs.unlink(path.resolve(__dirname, 'output.xml'));
+        }
+    });
+};
+
