@@ -169,6 +169,7 @@ exports['compose reporter options'] = function (test) {
 
     mocha({
         files: [path.resolve(__dirname, 'fixture/pass.js')],
+        quiet: true,
         reporter: 'xunit',
         'reporter-options': {
             output: path.resolve(__dirname, 'output.xml')
@@ -186,4 +187,23 @@ exports['compose reporter options'] = function (test) {
         }
     });
 };
+
+exports['ignore blank reporter options'] = function (test) {
+    test.expect(2);
+
+    mocha({
+        files: [path.resolve(__dirname, 'fixture/pass.js')],
+        quiet: true,
+        reporter: 'xunit',
+        'reporter-options': {}
+    }, function (error) {
+        test.ifError(error);
+        var outputFile = path.resolve(__dirname, 'output.xml');
+        test.throws(function () {
+            fs.readFileSync(outputFile, 'utf8');
+        }, Error, 'Error: ENOENT, no such file or directory ' + outputFile);
+        test.done();
+    });
+};
+
 
