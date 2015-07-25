@@ -63,6 +63,7 @@ The list of test files to run can be specified using either the standard Grunt f
  * `prof` (boolean) - log statistical profiling information, synonym for `node --prof`.
  * `recursive` (boolean) - include sub directories.
  * `reporter` (string) - specify the reporter to use.
+ * `reporter-options` (object) - specify the reporter options for some specific reporter, for example '{output: /tmp/out}' for 'xunit'.
  * `require` (array) - require the given modules.
  * `slow` (string) - "slow" test threshold in milliseconds [75].
  * `sort` (boolean) - sort test files.
