@@ -2,6 +2,9 @@
 All notable changes to this project will be documented in this file.
 This project follows [Semantic Versioning](http://semver.org).
 
+## 1.14.0 / 2015-07-26
+ - add: support for Mocha reporter-options.
+
 ## 1.13.1 / 2015-07-01
  - change: don't run mocha if there aren't any files.
  - change: upgrade the devDependencies.
