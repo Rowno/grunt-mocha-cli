@@ -124,9 +124,11 @@ exports['save option'] = function (test) {
         save: path.resolve(__dirname, 'output.txt'),
         reporter: 'tap'
     }, function (error) {
+        var output;
+
         try {
             test.ifError(error);
-            var output = fs.readFileSync(path.resolve(__dirname, 'output.txt'), 'utf8');
+            output = fs.readFileSync(path.resolve(__dirname, 'output.txt'), 'utf8');
             test.ok(output.match(/# pass 1/), 'expect 1 pass');
             test.done();
         } finally {
@@ -175,9 +177,11 @@ exports['compose reporter options'] = function (test) {
             output: path.resolve(__dirname, 'output.xml')
         }
     }, function (error) {
+        var output;
+
         try {
             test.ifError(error);
-            var output = fs.readFileSync(path.resolve(__dirname, 'output.xml'), 'utf8');
+            output = fs.readFileSync(path.resolve(__dirname, 'output.xml'), 'utf8');
             test.ok(output.match(/\<testsuite name\=/), 'expect testsuite start tag');
             test.ok(output.match(/\<\/testsuite\>/), 'expect testsuite end tag');
             test.ok(output.match(/\<testcase/), 'expect testcase tag');
@@ -197,8 +201,10 @@ exports['ignore blank reporter options'] = function (test) {
         reporter: 'xunit',
         'reporter-options': {}
     }, function (error) {
+        var outputFile;
+
         test.ifError(error);
-        var outputFile = path.resolve(__dirname, 'output.xml');
+        outputFile = path.resolve(__dirname, 'output.xml');
         test.throws(function () {
             fs.readFileSync(outputFile, 'utf8');
         }, Error, 'Error: ENOENT, no such file or directory ' + outputFile);

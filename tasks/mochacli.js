@@ -18,8 +18,7 @@ module.exports = function (grunt) {
         // Don't run mocha if there are no test files
         if (options.files.length === 0 &&
             // Check for files matched by filesRaw or the mocha default
-            grunt.file.expand(options.filesRaw || 'test/*.js').length === 0)
-        {
+            grunt.file.expand(options.filesRaw || 'test/*.js').length === 0) {
             return done();
         }
 
