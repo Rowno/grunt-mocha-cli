@@ -205,5 +205,3 @@ exports['ignore blank reporter options'] = function (test) {
         test.done();
     });
 };
-
-
