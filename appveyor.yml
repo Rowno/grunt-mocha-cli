@@ -17,6 +17,9 @@ install:
     - npm install -g grunt-cli
     - npm install
 
+# Don't try to compile the project
+build: off
+
 test_script:
     - node --version
     - npm --version
