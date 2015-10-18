@@ -5,7 +5,6 @@ Grunt Mocha CLI
 [![Build Status](https://ci.appveyor.com/api/projects/status/d8owof7rmt7h3ka8/branch/master?svg=true)](https://ci.appveyor.com/project/Rowno/grunt-mocha-cli)
 [![Dependency Status](https://david-dm.org/Rowno/grunt-mocha-cli.svg)](https://david-dm.org/Rowno/grunt-mocha-cli)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Rowno/grunt-mocha-cli)
-[![Gratipay](https://img.shields.io/gratipay/Rowno.svg)](https://gratipay.com/Rowno/)
 
 [![NPM](https://nodei.co/npm/grunt-mocha-cli.png?downloads=true&stars=true)](https://npmjs.org/package/grunt-mocha-cli)
 
