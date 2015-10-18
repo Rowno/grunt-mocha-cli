@@ -49,6 +49,7 @@ rules:
     no-div-regex: 1
     no-else-return: 1
     no-empty-label: 2
+    no-empty-pattern: 2
     no-eq-null: 0
     no-eval: 2
     no-extend-native: 2
@@ -62,6 +63,7 @@ rules:
     no-labels: 2
     no-lone-blocks: 1
     no-loop-func: 2
+    no-magic-numbers: 0
     no-multi-spaces: [1, { exceptions: { Property: false } }]
     no-multi-str: 2
     no-native-reassign: 2
@@ -81,6 +83,7 @@ rules:
     no-throw-literal: 2
     no-unused-expressions: 1
     no-useless-call: 1
+    no-useless-concat: 1
     no-void: 1
     no-warning-comments: 0
     no-with: 2
@@ -98,14 +101,15 @@ rules:
     no-shadow-restricted-names: 2
     no-shadow: [1, { builtinGlobals: true, hoist: 'functions'}]
     no-undef-init: 1
-    no-undef: 2
+    no-undef: [2, { typeof: true }]
     no-undefined: 1
     no-unused-vars: 1
     no-use-before-define: 1
     # Node.js
     callback-return: 1
+    global-require: 1
     handle-callback-err: 1
-    no-mixed-requires: [1, true]
+    no-mixed-requires: [1, { grouping: true }]
     no-new-require: 1
     no-path-concat: 1
     no-process-exit: 1
@@ -126,6 +130,7 @@ rules:
     id-length: 0
     id-match: 0
     indent: [1, 4, { SwitchCase: 1 }]
+    jsx-quotes: [1, 'prefer-double']
     key-spacing: [1, { beforeColon: false, afterColon: true }]
     lines-around-comment: [1, { beforeBlockComment: true, beforeLineComment: false, allowBlockStart: true }]
     linebreak-style: [1, 'unix']
@@ -139,8 +144,10 @@ rules:
     no-lonely-if: 1
     no-mixed-spaces-and-tabs: [1, 'smart-tabs']
     no-multiple-empty-lines: 0
+    no-negated-condition: 1
     no-nested-ternary: 1
     no-new-object: 1
+    no-restricted-syntax: 0
     no-spaced-func: 1
     no-ternary: 0
     no-trailing-spaces: 1
@@ -153,10 +160,12 @@ rules:
     padded-blocks: 0
     quote-props: [1, 'as-needed']
     quotes: [1, 'single', 'avoid-escape']
+    require-jsdoc: 0
     semi-spacing: [1, { before: false, after: true }]
     semi: [1, 'always']
     sort-vars: 0
     space-after-keywords: [1, 'always']
+    space-before-keywords: [1, 'always']
     space-before-blocks: [1, 'always']
     space-before-function-paren: [1, { anonymous: 'always', named: 'never' }]
     space-in-parens: [1, 'never']

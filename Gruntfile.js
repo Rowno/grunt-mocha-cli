@@ -1,10 +1,8 @@
 'use strict';
+var LoadGruntTasks = require('load-grunt-tasks');
+
 
 module.exports = function (grunt) {
-    // Load all grunt tasks
-    require('load-grunt-tasks')(grunt);
-
-
     grunt.initConfig({
         eslint: {
             all: [
@@ -17,7 +15,7 @@ module.exports = function (grunt) {
         }
     });
 
-
+    LoadGruntTasks(grunt);
     grunt.registerTask('test', ['nodeunit', 'eslint']);
     grunt.registerTask('default', 'test');
 };
