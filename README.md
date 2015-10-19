@@ -80,7 +80,7 @@ The list of test files to run can be specified using either the standard Grunt f
  * `force` (boolean) - continue running Grunt tasks even if tests fail.
  * `quiet` (boolean) - disable printing of Mocha's output to the terminal.
  * `save` (string) - write the mocha output to a file.
-
+ * `args` (string) - pass arbitrary arguments to mocha.  Anything not recgonized by mocha will be passed to node.
 
 ### Examples ###
 
