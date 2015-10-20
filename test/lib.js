@@ -106,7 +106,6 @@ exports['env option'] = function (test) {
     mocha({
         files: [path.resolve(__dirname, 'fixture/env.js')],
         quiet: true,
-        require: ['should'],
         env: {
             FOO: 'bar'
         }
@@ -208,6 +207,19 @@ exports['ignore blank reporter options'] = function (test) {
         test.throws(function () {
             fs.readFileSync(outputFile, 'utf8');
         }, Error, 'Error: ENOENT, no such file or directory ' + outputFile);
+        test.done();
+    });
+};
+
+exports['flags option'] = function (test) {
+    test.expect(1);
+
+    mocha({
+        files: [path.resolve(__dirname, 'fixture/flags.js')],
+        quiet: true,
+        flags: ['--harmony']
+    }, function (error) {
+        test.ifError(error);
         test.done();
     });
 };

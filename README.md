@@ -36,22 +36,13 @@ The list of test files to run can be specified using either the standard Grunt f
  * `check-leaks` (boolean) - check for global variable leaks.
  * `colors` (boolean) - force enabling of colors.
  * `compilers` (array) - use the given module(s) to compile files.
- * `debug-brk` (boolean) - enable node's debugger breaking on the first line.
+ * `debug-brk` (boolean) - enable node's debugger breaking on the first line, synonym for `node --debug-brk`.
  * `debug` (boolean) - enable node's debugger, synonym for `node --debug`.
  * `delay` (boolean) - wait for async suite definition.
- * `expose-gc` (boolean) - expose gc extension, synonym for `node --expose-gc`.
  * `fgrep` (string) - only run tests containing <string>.
- * `gc-global` (boolean) - always perform global GCs, synonym for `node --gc-global`.
  * `globals` (array) - allow the given comma-delimited global names.
  * `grep` (string) - only run tests matching <pattern>.
  * `growl` (boolean) - enable growl notification support.
- * `harmony_arrow_functions` (boolean) - enable "harmony arrow functions" (iojs), synonym for `node --harmony_arrow_functions`.
- * `harmony_proxies` (boolean) - enable "harmony proxies" (iojs), synonym for `node --harmony_proxies`.
- * `harmony_shipping` (boolean) - enable all shipped harmony fetaures (iojs), synonym for `node --harmony_shipping`.
- * `harmony-collections` (boolean) - enable harmony collections (sets, maps, and weak maps), synonym for `node --harmony-collections`.
- * `harmony-generators` (boolean) - enable harmony generators, synonym for `node --harmony-generators`.
- * `harmony-proxies` (boolean) - enable harmony proxies, synonym for `node --harmony-proxies`.
- * `harmony` (boolean) - enable all harmony features (except typeof), synonym for `node --harmony`.
  * `inline-diffs` (boolean) - display actual/expected differences inline within each string.
  * `invert` (boolean) - inverts `grep` and `fgrep` matches.
  * `ndebug` (boolean) - use node's debugger, synonym for `node debug`.
@@ -60,7 +51,6 @@ The list of test files to run can be specified using either the standard Grunt f
  * `no-exit` (boolean) - require a clean shutdown of the event loop: mocha will not call `process.exit()`.
  * `no-timeouts` (boolean) - disables timeouts, given implicitly with `debug`.
  * `opts` (string) - specify opts path.
- * `prof` (boolean) - log statistical profiling information, synonym for `node --prof`.
  * `recursive` (boolean) - include sub directories.
  * `reporter` (string) - specify the reporter to use.
  * `reporter-options` (object) - specify the reporter options for some specific reporter, for example '{output: /tmp/out}' for 'xunit'.
@@ -77,6 +67,7 @@ The list of test files to run can be specified using either the standard Grunt f
  * `env` (object) - hash of additional environment variables to pass to the Mocha process.
  * `files` (array) - globs of test files to run.
  * `filesRaw` (array) - globs of test files to run. These globs are passed directly to Mocha and aren't expanded by Grunt first.
+ * `flags` (array) - set arbitrary node/mocha flags.
  * `force` (boolean) - continue running Grunt tasks even if tests fail.
  * `quiet` (boolean) - disable printing of Mocha's output to the terminal.
  * `save` (string) - write the mocha output to a file.
