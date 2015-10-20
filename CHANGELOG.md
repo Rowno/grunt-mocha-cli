@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file.
 This project follows [Semantic Versioning](http://semver.org).
 
+## 2.0.0 / 2015-10-20
+ - add: flags option for setting arbitrary node/mocha flags.
+ - remove: all node flag options except for the debug ones (use the flags option instead).
+ - change: upgrade to Mocha 2.3.3.
+ - change: exclude unneeded files from the npm package.
+ - add: node 4 support.
+ - remove: iojs support.
+ - add: windows testing via appveyor.
+
 ## 1.14.0 / 2015-07-26
  - add: support for Mocha reporter-options.
 
