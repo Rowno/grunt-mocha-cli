@@ -166,7 +166,7 @@ exports['combine files and filesRaw options'] = function (test) {
 };
 
 exports['compose reporter options'] = function (test) {
-    test.expect(4);
+    test.expect(4); // eslint-disable-line no-magic-numbers
 
     mocha({
         files: [path.resolve(__dirname, 'fixture/pass.js')],
