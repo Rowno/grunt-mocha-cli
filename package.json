@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "coffee-script": "^1.9.1",
-    "eslint-config-rowno": "^1.0.1",
+    "eslint-config-rowno": "^2.1.0",
     "grunt": "^0.4.2",
     "grunt-contrib-nodeunit": "^0.4.0",
     "grunt-eslint": "^17.1.0",
