@@ -88,7 +88,7 @@ grunt.initConfig({
         all: ['test/*.js']
     }
 });
-
+grunt.loadNpmTasks('grunt-mocha-cli');
 grunt.registerTask('test', ['mochacli']);
 ```
 
@@ -113,7 +113,7 @@ grunt.initConfig({
         }
     }
 });
-
+grunt.loadNpmTasks('grunt-mocha-cli');
 grunt.registerTask('test', ['mochacli:spec']);
 ```
 
