@@ -16,7 +16,7 @@ Getting Started
 If you haven't used [Grunt][] before, be sure to check out the [Getting Started][] guide, as it explains how to create a Gruntfile as well as install and use Grunt plugins. You can install this plugin with this command:
 
 ```bash
-npm install grunt-mocha-cli --save-dev
+npm install mocha grunt-mocha-cli --save-dev
 ```
 
 
