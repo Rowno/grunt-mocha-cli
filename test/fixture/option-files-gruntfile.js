@@ -8,7 +8,8 @@ module.exports = function (grunt) {
         mochacli: {
             options: {
                 files: [path.resolve(__dirname, 'pass*.js')]
-            }
+            },
+            all: []
         }
     });
 

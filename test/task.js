@@ -66,12 +66,13 @@ exports['force option'] = function (test) {
 };
 
 exports['files option'] = function (test) {
-    test.expect(1);
+    test.expect(2);
 
     grunt.util.spawn({
         grunt: true,
         args: ['--gruntfile', path.resolve(__dirname, 'fixture/option-files-gruntfile.js')]
     }, function (error, output, code) {
+        test.notStrictEqual(output.stdout.indexOf('2 passing'), -1, 'should pass 2 tests');
         test.strictEqual(code, 0, 'grunt should pass');
         test.done();
     });
