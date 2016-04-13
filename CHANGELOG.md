@@ -2,6 +2,9 @@
 All notable changes to this project will be documented in this file.
 This project follows [Semantic Versioning](http://semver.org).
 
+## 2.1.0 / 2016-04-14
+ - change: update mocha and switch to caret semver range.
+
 ## 2.0.0 / 2015-10-20
  - add: flags option for setting arbitrary node/mocha flags.
  - remove: all node flag options except for the debug ones (use the flags option instead).

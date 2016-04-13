@@ -1,6 +1,6 @@
 {
   "name": "grunt-mocha-cli",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Run Mocha server-side tests in Grunt.",
   "author": "Roland Warmerdam (https://roland.codes)",
   "keywords": [
