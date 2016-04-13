@@ -1,5 +1,5 @@
 'use strict';
-var LoadGruntTasks = require('load-grunt-tasks');
+var loadGruntTasks = require('load-grunt-tasks');
 
 
 module.exports = function (grunt) {
@@ -15,7 +15,7 @@ module.exports = function (grunt) {
         }
     });
 
-    LoadGruntTasks(grunt);
+    loadGruntTasks(grunt);
     grunt.registerTask('test', ['nodeunit', 'eslint']);
     grunt.registerTask('default', 'test');
 };

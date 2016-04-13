@@ -2,6 +2,5 @@
 'use strict';
 
 describe('fixture', function () {
-    it('pass', function () {
-    });
+    it('pass', function () {}); // eslint-disable-line no-empty-function
 });

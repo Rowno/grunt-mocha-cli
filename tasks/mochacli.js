@@ -19,11 +19,15 @@ module.exports = function (grunt) {
         if (options.files.length === 0 &&
             // Check for files matched by filesRaw or the mocha default
             grunt.file.expand(options.filesRaw || 'test/*.js').length === 0) {
-            return done();
+
+            done();
+            return;
         }
 
         mocha(options, function (error) {
             done(options.force ? true : error);
         });
+
+        return;
     });
 };
