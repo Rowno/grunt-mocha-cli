@@ -55,10 +55,11 @@ The list of test files to run can be specified using either the standard Grunt f
  * `reporter` (string) - specify the reporter to use.
  * `reporter-options` (object) - specify the reporter options for some specific reporter, for example '{output: /tmp/out}' for 'xunit'.
  * `require` (array) - require the given modules.
- * `slow` (string) - "slow" test threshold in milliseconds [75].
+ * `retries` (integer) - set number of times to retry a failed test case.
+ * `slow` (integer) - "slow" test threshold in milliseconds [75].
  * `sort` (boolean) - sort test files.
  * `throw-deprecation` (boolean) - throw an exception anytime a deprecated function is used.
- * `timeout` (string) - set test-case timeout in milliseconds [2000].
+ * `timeout` (integer) - set test-case timeout in milliseconds [2000].
  * `trace-deprecation` (boolean) - show stack traces on deprecations.
  * `trace` (boolean) - trace function calls.
  * `ui` (string) - specify user-interface (bdd|tdd|exports).
