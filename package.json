@@ -13,16 +13,16 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
-    "mocha": "^2.4.5"
+    "mocha": "^3.1.2"
   },
   "devDependencies": {
     "coffee-script": "^1.9.1",
-    "eslint-config-rowno": "^3.1.0",
+    "eslint-config-rowno": "^4.0.0",
     "grunt": "^1.0.1",
     "grunt-contrib-nodeunit": "^1.0.0",
-    "grunt-eslint": "^18.0.0",
+    "grunt-eslint": "^19.0.0",
     "load-grunt-tasks": "^3.2.0",
-    "should": "^8.3.0"
+    "should": "^11.1.1"
   },
   "scripts": {
     "test": "grunt test"
