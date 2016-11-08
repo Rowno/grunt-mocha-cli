@@ -181,9 +181,9 @@ exports['compose reporter options'] = function (test) {
         try {
             test.ifError(error);
             output = fs.readFileSync(path.resolve(__dirname, 'output.xml'), 'utf8');
-            test.ok(output.match(/\<testsuite name\=/), 'expect testsuite start tag');
-            test.ok(output.match(/\<\/testsuite\>/), 'expect testsuite end tag');
-            test.ok(output.match(/\<testcase/), 'expect testcase tag');
+            test.ok(output.match(/<testsuite name=/), 'expect testsuite start tag');
+            test.ok(output.match(/<\/testsuite>/), 'expect testsuite end tag');
+            test.ok(output.match(/<testcase/), 'expect testcase tag');
             test.done();
         } finally {
             fs.unlink(path.resolve(__dirname, 'output.xml'));
