@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project follows [Semantic Versioning](http://semver.org).
 
+## 3.0.0 / 2016-11-07
+ - change: drop support for node 0.10 and 0.12.
+ - change: upgrade to mocha 3.1.2.
+
 ## 2.1.0 / 2016-04-14
  - change: update mocha and switch to caret semver range.
 
