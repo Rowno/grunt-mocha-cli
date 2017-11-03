@@ -27,7 +27,7 @@
   "scripts": {
     "test": "grunt test"
   },
-  "main": "lib/mocha",
+  "main": "tasks/mochacli.js",
   "files": [
     "lib",
     "tasks"
