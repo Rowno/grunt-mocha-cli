@@ -2,7 +2,7 @@ import path from 'path'
 import fs from 'fs'
 import test from 'ava'
 import tempy from 'tempy'
-import mocha from '../lib/mocha'
+import mocha from '../lib'
 
 function getFixturePath(filename) {
   return path.resolve(__dirname, 'fixtures', filename)

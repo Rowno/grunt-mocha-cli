@@ -1,5 +1,5 @@
 'use strict'
-const mocha = require('../lib/mocha')
+const mocha = require('../lib')
 
 module.exports = function(grunt) {
   grunt.registerMultiTask(
