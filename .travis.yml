@@ -1,14 +1,11 @@
-sudo: false
-
 language: node_js
-
 node_js:
-    - "7"
-    - "6"
-    - "4"
-
+  - "4"
+  - "6"
+  - "8"
+cache:
+  yarn: true
+  directories:
+    - node_modules
 before_script:
-    - npm install -g grunt-cli
-
-matrix:
-    fast_finish: true
+  - npm install -g grunt-cli

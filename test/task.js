@@ -1,92 +1,50 @@
-'use strict';
+import path from 'path'
+import test from 'ava'
+import execa from 'execa'
 
-var path = require('path');
-var grunt = require('grunt');
+const gruntPath = path.resolve(__dirname, '../node_modules/.bin/grunt')
 
+function executeGruntfile(filename) {
+  return execa(gruntPath, [
+    '--gruntfile',
+    path.resolve(__dirname, 'fixtures', filename)
+  ])
+}
 
-exports['grunt pass'] = function (test) {
-    test.expect(1);
+test('grunt pass', async t => {
+  const result = await executeGruntfile('grunt-pass-gruntfile.js')
+  t.false(result.failed, 'grunt should pass')
+})
 
-    grunt.util.spawn({
-        grunt: true,
-        args: ['--gruntfile', path.resolve(__dirname, 'fixture/grunt-pass-gruntfile.js')]
-    }, function (error, output, code) {
-        test.strictEqual(code, 0, 'grunt should pass');
-        test.done();
-    });
-};
+test('grunt fail', async t => {
+  const result = await t.throws(executeGruntfile('grunt-fail-gruntfile.js'))
+  t.true(result.failed, 'grunt should fail')
+})
 
-exports['grunt fail'] = function (test) {
-    test.expect(1);
+test('grunt files', async t => {
+  const result = await executeGruntfile('grunt-files-gruntfile.js')
+  t.false(result.failed, 'grunt should pass')
+  t.true(result.stdout.includes('2 passing', 'should pass 2 tests'))
+})
 
-    grunt.util.spawn({
-        grunt: true,
-        args: ['--gruntfile', path.resolve(__dirname, 'fixture/grunt-fail-gruntfile.js')]
-    }, function (error, output, code) {
-        test.notStrictEqual(code, 0, 'grunt should fail');
-        test.done();
-    });
-};
+test('grunt options', async t => {
+  const result = await executeGruntfile('grunt-options-gruntfile.js')
+  t.false(result.failed, 'grunt should pass')
+})
 
-exports['grunt files'] = function (test) {
-    test.expect(2);
+test('force option', async t => {
+  const result = await executeGruntfile('option-force-gruntfile.js')
+  t.false(result.failed, 'grunt should pass')
+})
 
-    grunt.util.spawn({
-        grunt: true,
-        args: ['--gruntfile', path.resolve(__dirname, 'fixture/grunt-files-gruntfile.js')]
-    }, function (error, output, code) {
-        test.notStrictEqual(output.stdout.indexOf('2 passing'), -1, 'should pass 2 tests');
-        test.strictEqual(code, 0, 'grunt should pass');
-        test.done();
-    });
-};
+test('files option', async t => {
+  const result = await executeGruntfile('option-files-gruntfile.js')
+  t.false(result.failed, 'grunt should pass')
+  t.true(result.stdout.includes('2 passing', 'should pass 2 tests'))
+})
 
-exports['grunt options'] = function (test) {
-    test.expect(1);
-
-    grunt.util.spawn({
-        grunt: true,
-        args: ['--gruntfile', path.resolve(__dirname, 'fixture/grunt-options-gruntfile.js')]
-    }, function (error, output, code) {
-        test.strictEqual(code, 0, 'grunt should pass');
-        test.done();
-    });
-};
-
-exports['force option'] = function (test) {
-    test.expect(1);
-
-    grunt.util.spawn({
-        grunt: true,
-        args: ['--gruntfile', path.resolve(__dirname, 'fixture/option-force-gruntfile.js')]
-    }, function (error, output, code) {
-        test.strictEqual(code, 0, 'grunt should pass');
-        test.done();
-    });
-};
-
-exports['files option'] = function (test) {
-    test.expect(2);
-
-    grunt.util.spawn({
-        grunt: true,
-        args: ['--gruntfile', path.resolve(__dirname, 'fixture/option-files-gruntfile.js')]
-    }, function (error, output, code) {
-        test.notStrictEqual(output.stdout.indexOf('2 passing'), -1, 'should pass 2 tests');
-        test.strictEqual(code, 0, 'grunt should pass');
-        test.done();
-    });
-};
-
-exports['missing files'] = function (test) {
-    test.expect(2);
-
-    grunt.util.spawn({
-        grunt: true,
-        args: ['--gruntfile', path.resolve(__dirname, 'fixture/missing-files-gruntfile.js')]
-    }, function (error, output, code) {
-        test.notStrictEqual(output.stdout.indexOf('1 passing'), -1, 'should pass 1 test');
-        test.strictEqual(code, 0, 'grunt should pass');
-        test.done();
-    });
-};
+test('missing files', async t => {
+  const result = await executeGruntfile('missing-files-gruntfile.js')
+  t.false(result.failed, 'grunt should pass')
+  t.true(result.stdout.includes('1 passing', 'should pass 1 test'))
+})

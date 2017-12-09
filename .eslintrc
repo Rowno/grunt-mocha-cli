@@ -1,7 +1,0 @@
----
-root: true
-extends: rowno
-env:
-    node: true
-rules:
-    no-sync: 0
