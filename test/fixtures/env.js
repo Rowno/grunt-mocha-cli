@@ -4,6 +4,6 @@ const should = require('should')
 
 describe('fixture', () => {
   it('should have environment variable "FOO"', () => {
-    should.strictEqual(process.env.FOO, 'bar') // eslint-disable-line no-process-env
+    should.strictEqual(process.env.FOO, 'bar')
   })
 })

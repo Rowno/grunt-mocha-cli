@@ -26,9 +26,10 @@ module.exports = function(grunt) {
         return
       }
 
-      mocha(options, error => {
-        done(options.force ? true : error)
-      })
+      mocha(options).then(
+        () => done(),
+        error => done(options.force ? true : error)
+      )
     }
   )
 }

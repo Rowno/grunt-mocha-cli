@@ -8,225 +8,134 @@ function getFixturePath(filename) {
   return path.resolve(__dirname, 'fixtures', filename)
 }
 
-test.cb('sanity check', t => {
-  mocha(
-    {
-      files: [getFixturePath('pass.js')],
-      quiet: true
-    },
-    (error, output) => {
-      t.ifError(error)
-      t.true(output.includes('1 passing'), '1 test should pass')
-      t.end()
-    }
-  )
+test('sanity check', async t => {
+  const output = await mocha({
+    files: [getFixturePath('pass.js')],
+    quiet: true
+  })
+  t.true(output.includes('1 passing'), '1 test should pass')
 })
 
-test.cb('mocha pass', t => {
-  mocha(
-    {
-      files: [getFixturePath('pass.js')],
-      quiet: true
-    },
-    error => {
-      t.ifError(error, 'mocha should pass')
-      t.end()
-    }
-  )
+test('mocha pass', async t => {
+  const output = await mocha({
+    files: [getFixturePath('pass.js')],
+    quiet: true
+  })
+  t.true(output.includes('1 passing'), '1 test should pass')
 })
 
-test.cb('mocha fail', t => {
-  mocha(
-    {
+test('mocha fail', async t => {
+  await t.throws(
+    mocha({
       files: [getFixturePath('fail.js')],
       quiet: true
-    },
-    error => {
-      t.truthy(error, 'mocha should fail')
-      t.end()
-    }
+    })
   )
 })
 
-test.cb('set mocha option of type string', t => {
-  mocha(
-    {
-      files: [getFixturePath('pass.js')],
-      quiet: true,
-      reporter: 'tap'
-    },
-    (error, output) => {
-      t.ifError(error)
-      t.true(output.includes('# pass 1'), 'expect 1 pass')
-      t.end()
-    }
-  )
+test('set mocha option of type string', async t => {
+  const output = await mocha({
+    files: [getFixturePath('pass.js')],
+    quiet: true,
+    reporter: 'tap'
+  })
+  t.true(output.includes('# pass 1'), '1 test should pass')
 })
 
-test.cb('set mocha option of type bool', t => {
-  mocha(
-    {
-      files: [getFixturePath('fail.js')],
-      quiet: true,
-      reporter: 'tap',
-      bail: true
-    },
-    (error, output) => {
-      t.true(output.includes('# fail 1'), 'expect 1 fail')
-      t.end()
-    }
-  )
+test('set mocha option of type bool', async t => {
+  const output = await mocha({
+    files: [getFixturePath('pass.js')],
+    quiet: true,
+    colors: true
+  })
+  t.true(output.includes('[32m 1 passing'), '1 test should pass with colors')
 })
 
-test.cb('set mocha option of type array', t => {
-  mocha(
-    {
-      files: [getFixturePath('coffeescript.coffee')],
-      quiet: true,
-      reporter: 'tap',
-      compilers: ['coffee:coffee-script/register']
-    },
-    (error, output) => {
-      t.ifError(error)
-      t.true(output.includes('# pass 1'), 'expect 1 pass')
-      t.end()
-    }
-  )
+test('set mocha option of type array', async t => {
+  const output = await mocha({
+    files: [getFixturePath('coffeescript.coffee')],
+    quiet: true,
+    reporter: 'tap',
+    compilers: ['coffee:coffee-script/register']
+  })
+  t.true(output.includes('# pass 1'), '1 test should pass')
 })
 
-test.cb('require modules', t => {
-  mocha(
-    {
-      files: [getFixturePath('require.js')],
-      quiet: true,
-      reporter: 'tap',
-      require: ['should']
-    },
-    (error, output) => {
-      t.ifError(error)
-      t.true(output.includes('# pass 1'), 'expect 1 pass')
-      t.end()
-    }
-  )
+test('require modules', async t => {
+  const output = await mocha({
+    files: [getFixturePath('require.js')],
+    quiet: true,
+    reporter: 'tap',
+    require: ['should']
+  })
+  t.true(output.includes('# pass 1'), '1 test should pass')
 })
 
-test.cb('env option', t => {
-  mocha(
-    {
-      files: [getFixturePath('env.js')],
-      quiet: true,
-      env: {
-        FOO: 'bar'
-      }
-    },
-    error => {
-      t.ifError(error)
-      t.end()
+test('env option', async t => {
+  const output = await mocha({
+    files: [getFixturePath('env.js')],
+    quiet: true,
+    env: {
+      FOO: 'bar'
     }
-  )
+  })
+  t.true(output.includes('1 passing'), '1 test should pass')
 })
 
-test.cb('save option', t => {
+test('save option', async t => {
   const outputPath = tempy.file()
-
-  mocha(
-    {
-      files: [getFixturePath('pass.js')],
-      save: outputPath,
-      reporter: 'tap'
-    },
-    error => {
-      t.ifError(error)
-      const output = fs.readFileSync(outputPath, 'utf8')
-      t.true(output.includes('# pass 1'), 'expect 1 pass')
-      t.end()
-    }
-  )
+  await mocha({
+    files: [getFixturePath('pass.js')],
+    save: outputPath,
+    reporter: 'tap'
+  })
+  const output = fs.readFileSync(outputPath, 'utf8')
+  t.true(output.includes('# pass 1'), 'expect 1 pass')
 })
 
-test.cb('filesRaw option', t => {
-  mocha(
-    {
-      filesRaw: [getFixturePath('pass*.js')],
-      quiet: true,
-      reporter: 'tap'
-    },
-    (error, output) => {
-      t.ifError(error)
-      t.true(output.includes('# pass 2'), 'expect 2 pass')
-      t.end()
-    }
-  )
+test('filesRaw option', async t => {
+  const output = await mocha({
+    filesRaw: [getFixturePath('pass*.js')],
+    quiet: true,
+    reporter: 'tap'
+  })
+  t.true(output.includes('# pass 2'), 'expect 2 pass')
 })
 
-test.cb('combine files and filesRaw options', t => {
-  mocha(
-    {
+test('combine files and filesRaw options', async t => {
+  const error = await t.throws(
+    mocha({
       files: [getFixturePath('fail.js')],
       filesRaw: [getFixturePath('pass*.js')],
       quiet: true,
       reporter: 'tap'
-    },
-    (error, output) => {
-      t.true(output.includes('# fail 1'), 'expect 1 fail')
-      t.true(output.includes('# pass 2'), 'expect 2 pass')
-      t.end()
-    }
+    })
   )
+  t.true(error.output.includes('# fail 1'), 'expect 1 fail')
+  t.true(error.output.includes('# pass 2'), 'expect 2 pass')
 })
 
-test.cb('compose reporter options', t => {
+test('compose reporter options', async t => {
   const outputPath = tempy.file()
-
-  mocha(
-    {
-      files: [getFixturePath('pass.js')],
-      quiet: true,
-      reporter: 'xunit',
-      'reporter-options': {
-        output: outputPath
-      }
-    },
-    error => {
-      t.ifError(error)
-      const output = fs.readFileSync(outputPath, 'utf8')
-      t.true(output.includes('<testsuite name='), 'expect testsuite start tag')
-      t.true(output.includes('</testsuite>'), 'expect testsuite end tag')
-      t.true(output.includes('<testcase'), 'expect testcase tag')
-      t.end()
+  await mocha({
+    files: [getFixturePath('pass.js')],
+    quiet: true,
+    reporter: 'xunit',
+    'reporter-options': {
+      output: outputPath
     }
-  )
+  })
+  const output = fs.readFileSync(outputPath, 'utf8')
+  t.true(output.includes('<testsuite name='), 'expect testsuite start tag')
+  t.true(output.includes('</testsuite>'), 'expect testsuite end tag')
+  t.true(output.includes('<testcase'), 'expect testcase tag')
 })
 
-test.cb('ignore blank reporter options', t => {
-  mocha(
-    {
-      files: [getFixturePath('pass.js')],
-      quiet: true,
-      reporter: 'xunit',
-      'reporter-options': {}
-    },
-    error => {
-      t.ifError(error)
-      t.throws(() => {
-        fs.readFileSync(path.resolve(__dirname, 'output.xml'), 'utf8')
-      }, /ENOENT/)
-
-      t.end()
-    }
-  )
-})
-
-test.cb('flags option', t => {
-  mocha(
-    {
-      files: [getFixturePath('flags.js')],
-      quiet: true,
-      flags: ['--harmony']
-    },
-    error => {
-      t.ifError(error)
-      t.end()
-    }
-  )
+test('flags option', async t => {
+  const output = await mocha({
+    files: [getFixturePath('flags.js')],
+    quiet: true,
+    flags: ['--harmony']
+  })
+  t.true(output.includes('1 passing'), '1 test should pass')
 })
