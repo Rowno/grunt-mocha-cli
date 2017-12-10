@@ -56,7 +56,7 @@ test('set mocha option of type array', async t => {
     files: [getFixturePath('coffeescript.coffee')],
     quiet: true,
     reporter: 'tap',
-    compilers: ['coffee:coffee-script/register']
+    compilers: ['coffee:coffeescript/register']
   })
   t.true(output.includes('# pass 1'), '1 test should pass')
 })
