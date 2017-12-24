@@ -6,6 +6,7 @@
   "keywords": ["gruntplugin", "mocha"],
   "repository": "Rowno/grunt-mocha-cli",
   "license": "MIT",
+  "main": "tasks/mochacli.js",
   "files": ["lib", "tasks"],
   "scripts": {
     "test": "xo && ava",
