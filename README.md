@@ -26,6 +26,7 @@ The list of test files to run can be specified using either the standard Grunt f
 
 #### Mocha Options
 
+* `allow-uncaught` (boolean) - enable uncaught errors to propagate.
 * `async-only` (boolean) - force all tests to take a callback (async).
 * `bail` (boolean) - bail after first test failure.
 * `check-leaks` (boolean) - check for global variable leaks.
@@ -34,18 +35,24 @@ The list of test files to run can be specified using either the standard Grunt f
 * `debug-brk` (boolean) - enable node's debugger breaking on the first line, synonym for `node --debug-brk`.
 * `debug` (boolean) - enable node's debugger, synonym for `node --debug`.
 * `delay` (boolean) - wait for async suite definition.
+* `exit` (boolean) - force shutdown of the event loop after test run: mocha will call process.exit.
 * `fgrep` (string) - only run tests containing <string>.
+* `forbid-only` (boolean) - causes test marked with only to fail the suite.
+* `forbid-pending` (boolean) - causes pending tests and test marked with skip to fail the suite.
+* `full-trace` (boolean) - display the full stack trace.
 * `globals` (array) - allow the given comma-delimited global names.
 * `grep` (string) - only run tests matching <pattern>.
 * `growl` (boolean) - enable growl notification support.
 * `inline-diffs` (boolean) - display actual/expected differences inline within each string.
 * `invert` (boolean) - inverts `grep` and `fgrep` matches.
+* `log-timer-events` (boolean) - time events including external callbacks.
 * `ndebug` (boolean) - use node's debugger, synonym for `node debug`.
 * `no-colors` (boolean) - force disabling of colors.
 * `no-deprecation` (boolean) - silence deprecation warnings.
-* `no-exit` (boolean) - require a clean shutdown of the event loop: mocha will not call `process.exit()`.
+* `no-diff` (boolean) - do not show a diff on failure.
 * `no-timeouts` (boolean) - disables timeouts, given implicitly with `debug`.
 * `opts` (string) - specify opts path.
+* `perf-basic-prof` (boolean) - enable perf linux profiler (basic support).
 * `recursive` (boolean) - include sub directories.
 * `reporter` (string) - specify the reporter to use.
 * `reporter-options` (object) - specify the reporter options for some specific reporter, for example '{output: /tmp/out}' for 'xunit'.
@@ -58,6 +65,7 @@ The list of test files to run can be specified using either the standard Grunt f
 * `trace-deprecation` (boolean) - show stack traces on deprecations.
 * `trace` (boolean) - trace function calls.
 * `ui` (string) - specify user-interface (bdd|tdd|exports).
+* `use_strict` (boolean) - enforce strict mode.
 
 #### Extras
 
