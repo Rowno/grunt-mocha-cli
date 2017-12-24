@@ -1,5 +1,5 @@
 import path from 'path'
-import fs from 'fs'
+import fs from 'mz/fs'
 import test from 'ava'
 import tempy from 'tempy'
 import mocha from '../lib'
@@ -89,7 +89,7 @@ test('save option', async t => {
     save: outputPath,
     reporter: 'tap'
   })
-  const output = fs.readFileSync(outputPath, 'utf8')
+  const output = await fs.readFile(outputPath, 'utf8')
   t.true(output.includes('# pass 1'), 'expect 1 pass')
 })
 
@@ -125,7 +125,7 @@ test('compose reporter options', async t => {
       output: outputPath
     }
   })
-  const output = fs.readFileSync(outputPath, 'utf8')
+  const output = await fs.readFile(outputPath, 'utf8')
   t.true(output.includes('<testsuite name='), 'expect testsuite start tag')
   t.true(output.includes('</testsuite>'), 'expect testsuite end tag')
   t.true(output.includes('<testcase'), 'expect testcase tag')
