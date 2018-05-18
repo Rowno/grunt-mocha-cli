@@ -131,6 +131,6 @@ Grunt Mocha CLI is released under the MIT license.
 
 Copyright © 2013 Roland Warmerdam.
 
-[mocha]: http://visionmedia.github.com/mocha/
+[mocha]: http://mochajs.org/
 [grunt]: http://gruntjs.com/
 [getting started]: http://gruntjs.com/getting-started
