@@ -17,7 +17,9 @@ test('grunt pass', async t => {
 })
 
 test('grunt fail', async t => {
-  const result = await t.throws(executeGruntfile('grunt-fail-gruntfile.js'))
+  const result = await t.throwsAsync(
+    executeGruntfile('grunt-fail-gruntfile.js')
+  )
   t.true(result.failed, 'grunt should fail')
 })
 

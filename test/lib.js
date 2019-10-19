@@ -25,7 +25,7 @@ test('mocha pass', async t => {
 })
 
 test('mocha fail', async t => {
-  await t.throws(
+  await t.throwsAsync(
     mocha({
       files: [getFixturePath('fail.js')],
       quiet: true
@@ -103,7 +103,7 @@ test('filesRaw option', async t => {
 })
 
 test('combine files and filesRaw options', async t => {
-  const error = await t.throws(
+  const error = await t.throwsAsync(
     mocha({
       files: [getFixturePath('fail.js')],
       filesRaw: [getFixturePath('pass*.js')],

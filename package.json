@@ -3,11 +3,17 @@
   "version": "4.0.0",
   "description": "Run Mocha server-side tests in Grunt.",
   "author": "Roland Warmerdam (https://roland.codes)",
-  "keywords": ["gruntplugin", "mocha"],
+  "keywords": [
+    "gruntplugin",
+    "mocha"
+  ],
   "repository": "Rowno/grunt-mocha-cli",
   "license": "MIT",
   "main": "tasks/mochacli.js",
-  "files": ["lib", "tasks"],
+  "files": [
+    "lib",
+    "tasks"
+  ],
   "scripts": {
     "test": "xo && ava",
     "precommit": "lint-staged"
@@ -19,7 +25,7 @@
     "mocha": "^4.0.0"
   },
   "devDependencies": {
-    "ava": "^0.24.0",
+    "ava": "^2.4.0",
     "coffee-script": "^1.9.1",
     "eslint-config-prettier": "^2.9.0",
     "execa": "^0.8.0",
@@ -33,17 +39,32 @@
     "xo": "^0.18.2"
   },
   "xo": {
-    "extends": ["prettier"],
+    "extends": [
+      "prettier"
+    ],
     "rules": {
-      "indent": ["off"]
+      "indent": [
+        "off"
+      ]
     }
+  },
+  "ava": {
+    "helpers": [
+      "**/fixtures/**/*"
+    ]
   },
   "prettier": {
     "semi": false,
     "singleQuote": true
   },
   "lint-staged": {
-    "*.js": ["xo --fix", "prettier --write", "git add"],
-    "*.{json,md}": ["prettier --write", "git add"]
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
