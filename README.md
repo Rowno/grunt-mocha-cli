@@ -26,56 +26,55 @@ The list of test files to run can be specified using either the standard Grunt f
 
 #### Mocha Options
 
-* `allow-uncaught` (boolean) - enable uncaught errors to propagate.
-* `async-only` (boolean) - force all tests to take a callback (async).
-* `bail` (boolean) - bail after first test failure.
-* `check-leaks` (boolean) - check for global variable leaks.
-* `colors` (boolean) - force enabling of colors.
-* `compilers` (array) - use the given module(s) to compile files.
-* `debug-brk` (boolean) - enable node's debugger breaking on the first line, synonym for `node --debug-brk`.
-* `debug` (boolean) - enable node's debugger, synonym for `node --debug`.
-* `delay` (boolean) - wait for async suite definition.
-* `exit` (boolean) - force shutdown of the event loop after test run: mocha will call process.exit.
-* `fgrep` (string) - only run tests containing <string>.
-* `forbid-only` (boolean) - causes test marked with only to fail the suite.
-* `forbid-pending` (boolean) - causes pending tests and test marked with skip to fail the suite.
-* `full-trace` (boolean) - display the full stack trace.
-* `globals` (array) - allow the given comma-delimited global names.
-* `grep` (string) - only run tests matching <pattern>.
-* `growl` (boolean) - enable growl notification support.
-* `inline-diffs` (boolean) - display actual/expected differences inline within each string.
-* `invert` (boolean) - inverts `grep` and `fgrep` matches.
-* `log-timer-events` (boolean) - time events including external callbacks.
-* `ndebug` (boolean) - use node's debugger, synonym for `node debug`.
-* `no-colors` (boolean) - force disabling of colors.
-* `no-deprecation` (boolean) - silence deprecation warnings.
-* `no-diff` (boolean) - do not show a diff on failure.
-* `no-timeouts` (boolean) - disables timeouts, given implicitly with `debug`.
-* `opts` (string) - specify opts path.
-* `perf-basic-prof` (boolean) - enable perf linux profiler (basic support).
-* `recursive` (boolean) - include sub directories.
-* `reporter` (string) - specify the reporter to use.
-* `reporter-options` (object) - specify the reporter options for some specific reporter, for example '{output: /tmp/out}' for 'xunit'.
-* `require` (array) - require the given modules.
-* `retries` (integer) - set number of times to retry a failed test case.
-* `slow` (integer) - "slow" test threshold in milliseconds [75].
-* `sort` (boolean) - sort test files.
-* `throw-deprecation` (boolean) - throw an exception anytime a deprecated function is used.
-* `timeout` (integer) - set test-case timeout in milliseconds [2000].
-* `trace-deprecation` (boolean) - show stack traces on deprecations.
-* `trace` (boolean) - trace function calls.
-* `ui` (string) - specify user-interface (bdd|tdd|exports).
-* `use_strict` (boolean) - enforce strict mode.
+- `allow-uncaught` (boolean) - enable uncaught errors to propagate.
+- `async-only` (boolean) - force all tests to take a callback (async).
+- `bail` (boolean) - bail after first test failure.
+- `check-leaks` (boolean) - check for global variable leaks.
+- `colors` (boolean) - force enabling of colors.
+- `debug-brk` (boolean) - enable node's debugger breaking on the first line, synonym for `node --debug-brk`.
+- `debug` (boolean) - enable node's debugger, synonym for `node --debug`.
+- `delay` (boolean) - wait for async suite definition.
+- `exit` (boolean) - force shutdown of the event loop after test run: mocha will call process.exit.
+- `fgrep` (string) - only run tests containing <string>.
+- `forbid-only` (boolean) - causes test marked with only to fail the suite.
+- `forbid-pending` (boolean) - causes pending tests and test marked with skip to fail the suite.
+- `full-trace` (boolean) - display the full stack trace.
+- `globals` (array) - allow the given comma-delimited global names.
+- `grep` (string) - only run tests matching <pattern>.
+- `growl` (boolean) - enable growl notification support.
+- `inline-diffs` (boolean) - display actual/expected differences inline within each string.
+- `invert` (boolean) - inverts `grep` and `fgrep` matches.
+- `log-timer-events` (boolean) - time events including external callbacks.
+- `ndebug` (boolean) - use node's debugger, synonym for `node debug`.
+- `no-colors` (boolean) - force disabling of colors.
+- `no-deprecation` (boolean) - silence deprecation warnings.
+- `no-diff` (boolean) - do not show a diff on failure.
+- `no-timeouts` (boolean) - disables timeouts, given implicitly with `debug`.
+- `opts` (string) - specify opts path.
+- `perf-basic-prof` (boolean) - enable perf linux profiler (basic support).
+- `recursive` (boolean) - include sub directories.
+- `reporter` (string) - specify the reporter to use.
+- `reporter-options` (object) - specify the reporter options for some specific reporter, for example '{output: /tmp/out}' for 'xunit'.
+- `require` (array) - require the given modules.
+- `retries` (integer) - set number of times to retry a failed test case.
+- `slow` (integer) - "slow" test threshold in milliseconds [75].
+- `sort` (boolean) - sort test files.
+- `throw-deprecation` (boolean) - throw an exception anytime a deprecated function is used.
+- `timeout` (integer) - set test-case timeout in milliseconds [2000].
+- `trace-deprecation` (boolean) - show stack traces on deprecations.
+- `trace` (boolean) - trace function calls.
+- `ui` (string) - specify user-interface (bdd|tdd|exports).
+- `use_strict` (boolean) - enforce strict mode.
 
 #### Extras
 
-* `env` (object) - hash of additional environment variables to pass to the Mocha process.
-* `files` (array) - globs of test files to run.
-* `filesRaw` (array) - globs of test files to run. These globs are passed directly to Mocha and aren't expanded by Grunt first.
-* `flags` (array) - set arbitrary node/mocha flags.
-* `force` (boolean) - continue running Grunt tasks even if tests fail.
-* `quiet` (boolean) - disable printing of Mocha's output to the terminal.
-* `save` (string) - write the mocha output to a file.
+- `env` (object) - hash of additional environment variables to pass to the Mocha process.
+- `files` (array) - globs of test files to run.
+- `filesRaw` (array) - globs of test files to run. These globs are passed directly to Mocha and aren't expanded by Grunt first.
+- `flags` (array) - set arbitrary node/mocha flags.
+- `force` (boolean) - continue running Grunt tasks even if tests fail.
+- `quiet` (boolean) - disable printing of Mocha's output to the terminal.
+- `save` (string) - write the mocha output to a file.
 
 ### Examples
 

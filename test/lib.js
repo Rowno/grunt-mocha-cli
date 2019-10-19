@@ -51,16 +51,6 @@ test('set mocha option of type bool', async t => {
   t.true(output.includes('[32m 1 passing'), '1 test should pass with colors')
 })
 
-test('set mocha option of type array', async t => {
-  const output = await mocha({
-    files: [getFixturePath('coffeescript.coffee')],
-    quiet: true,
-    reporter: 'tap',
-    compilers: ['coffee:coffee-script/register']
-  })
-  t.true(output.includes('# pass 1'), '1 test should pass')
-})
-
 test('require modules', async t => {
   const output = await mocha({
     files: [getFixturePath('require.js')],
