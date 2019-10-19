@@ -15,7 +15,7 @@
     "tasks"
   ],
   "scripts": {
-    "test": "eslint '**/*.js' && ava"
+    "test": "eslint \"**/*.js\" && ava"
   },
   "engines": {
     "node": ">=8"
