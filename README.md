@@ -31,8 +31,6 @@ The list of test files to run can be specified using either the standard Grunt f
 - `bail` (boolean) - bail after first test failure.
 - `check-leaks` (boolean) - check for global variable leaks.
 - `colors` (boolean) - force enabling of colors.
-- `debug-brk` (boolean) - enable node's debugger breaking on the first line, synonym for `node --debug-brk`.
-- `debug` (boolean) - enable node's debugger, synonym for `node --debug`.
 - `delay` (boolean) - wait for async suite definition.
 - `exit` (boolean) - force shutdown of the event loop after test run: mocha will call process.exit.
 - `fgrep` (string) - only run tests containing <string>.
@@ -45,11 +43,10 @@ The list of test files to run can be specified using either the standard Grunt f
 - `inline-diffs` (boolean) - display actual/expected differences inline within each string.
 - `invert` (boolean) - inverts `grep` and `fgrep` matches.
 - `log-timer-events` (boolean) - time events including external callbacks.
-- `ndebug` (boolean) - use node's debugger, synonym for `node debug`.
 - `no-colors` (boolean) - force disabling of colors.
 - `no-deprecation` (boolean) - silence deprecation warnings.
 - `no-diff` (boolean) - do not show a diff on failure.
-- `no-timeouts` (boolean) - disables timeouts, given implicitly with `debug`.
+- `no-timeouts` (boolean) - disables timeouts.
 - `opts` (string) - specify opts path.
 - `perf-basic-prof` (boolean) - enable perf linux profiler (basic support).
 - `recursive` (boolean) - include sub directories.
