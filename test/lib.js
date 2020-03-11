@@ -1,8 +1,8 @@
-import path from 'path'
-import fs from 'mz/fs'
-import test from 'ava'
-import tempy from 'tempy'
-import mocha from '../lib'
+const path = require('path')
+const fs = require('mz/fs')
+const test = require('ava')
+const tempy = require('tempy')
+const mocha = require('../lib')
 
 function getFixturePath(filename) {
   return path.resolve(__dirname, 'fixtures', filename)
