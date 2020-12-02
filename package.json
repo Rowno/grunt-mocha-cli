@@ -21,7 +21,7 @@
     "node": ">=10"
   },
   "dependencies": {
-    "mocha": "^7.1.0"
+    "mocha": "^8.2.0"
   },
   "devDependencies": {
     "ava": "^3.5.0",
