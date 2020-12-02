@@ -47,7 +47,7 @@ The list of test files to run can be specified using either the standard Grunt f
 - `no-deprecation` (boolean) - silence deprecation warnings.
 - `no-diff` (boolean) - do not show a diff on failure.
 - `no-timeouts` (boolean) - disables timeouts.
-- `opts` (string) - specify opts path.
+- `parallel` (boolean) - run tests in parallel.
 - `perf-basic-prof` (boolean) - enable perf linux profiler (basic support).
 - `recursive` (boolean) - include sub directories.
 - `reporter` (string) - specify the reporter to use.
